@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="angleInputterSkin" width="250" height="200" xmlns:e="http://ns.egret.com/eui">
+	<e:Image id="bg" x="0" source="AngleInputterBg_png" y="0"/>
+	<e:Group id="angleCanvasGrp" x="0" y="0" visible="false"/>
+	<e:Image id="toucher" source="AngleInputterToucher_png" x="0" y="0" visible="false"/>
+</e:Skin>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="bottomAreaAngleSkin" width="480" height="210" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:eyeangle2="eyeangle2.*">
+	<e:Group id="bgGrp" width="1" height="1" x="0" y="0"/>
+	<eyeangle2:CAngleInputter id="angleInputter"  x="114" y="5"/>
+	<e:Button id="nextBtn" label="下一角度"  x="370" y="74" enabled="false"/>
+	<e:Button id="OKBtn" label=" 确 定 "  x="370" y="14"/>
+	<e:Button id="backBtn" label=" 返 回 "  x="4" y="95"/>
+	<e:Button id="caliBtn" label="横竖校准"  x="12" y="147"/>
+</e:Skin>

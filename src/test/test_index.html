@@ -1,0 +1,47 @@
+<!--
+	/src/test/test_index.html
+	测试方法：
+		1、测试前要先执行 /src/components/compile_for_test.bat 编译待测组件。要求编译成功无错误。
+		2、用浏览器打开本网页即可。
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+	<title>QUnit Test Suite</title>
+		<link rel="stylesheet" href="jquery-qunit/qunit/qunit.css">
+
+			<script src="jquery-qunit/qunit/qunit.js"></script>
+			<script src="jquery-2.1.0.js" type="text/javascript"></script>
+
+			<script src="../structs/CPoint.js"></script>
+			<script src="../structs/CRect.js"></script>
+			<script src="../structs/CPraElemBase.js"></script>
+			<script src="../structs/CAngle.js"></script>
+			<script src="../funcs/funcs_eint1.js"></script>
+			<script src="../funcs/funcs_eint2.js"></script>
+			<script src="../funcs/funcs_eyeangle.js"></script>
+			<script src="../components/EintParsers.js"></script>
+			<script src="../components/CAngleChecker.js"></script>
+			<script src="../components/CPraMachine_Eyeangle2.js"></script>
+			<script src="../components/CEyeangle2_winModel.js"></script>
+			<script src="../components/ImgThumbModel.js"></script>
+			<script src="../components/ImgThumbModelAdapter.js"></script>
+			<script src="../components/presenters/CAnglePraPresenter.js"></script>
+			<script src="../components/renderFilters/common\CNoChangeRenderFilter.js"></script>
+			<script src="../components/renderFilters/Eyeangle\CEyeangle2RenderFilter.js"></script>
+
+			<script src="test_funcs.js"></script>
+			<script src="test_AngleCheckers.js"></script>
+			<script src="test_EintParsers.js"></script>
+			<script src="test_anglePraMachine.js"></script>
+			<script src="test_UIPresenters.js"></script>
+			<script src="test_RenderFilters.js"></script>
+			<script src="test_winModel.js"></script>
+		</head>
+		<body>
+		<div id="qunit"></div>
+		<div id="qunit-fixture">test markup</div>
+		</body>
+	</html>

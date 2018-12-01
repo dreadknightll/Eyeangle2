@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="praSceneAngleSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:eyeangle2="eyeangle2.*">
+	<e:Group id="midAreaGroup" x="0" y="300">
+		<eyeangle2:CMidArea id="midArea" x="0" y="0" />
+	</e:Group>
+	<e:Group id="topAreaGroup" x="0" y="50">
+		<eyeangle2:CTopArea id="topArea" x="0" y="0" />
+	</e:Group>
+	<e:Group id="bottomAreaGroup" x="0" y="400">
+		<eyeangle2:CBottomArea id="bottomArea" x="0" y="0" />
+	</e:Group>
+
+	<e:Group id="topSpaceGrp" height="1" width="1" x="0" y="0"/>
+	<eyeangle2:CCmpAngleDlg id="cmpAngleDlg" x="165" y="600" visible="false"/>
+	<eyeangle2:CFinalScoreDlg id="finalScoreDlg" x="60" y="111" visible="false"/>
+</e:Skin>

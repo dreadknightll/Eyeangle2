@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="startingCharAni" width="240" height="40" xmlns:e="http://ns.egret.com/eui">
+	<e:Label id="textLabel" text="练习即将开始" x="20" y="5" size="24" textColor="0x000000"/>
+</e:Skin>
