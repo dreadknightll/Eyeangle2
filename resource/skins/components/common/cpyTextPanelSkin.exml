@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="cpyTextPanelSkin" width="350" height="500" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Rect id="rectOuter" width="100%" height="100%" fillColor="0x000000" />
+    <e:Rect id="rectInner" width="95%" height="97%" fillColor="0x999999"  horizontalCenter="0" verticalCenter="0"/>
+    <e:Label text="框里的内容可供复制：" x="25" y="22" textColor="0x000000"/>
+    <e:EditableText id="txtArea" width="306" height="352" x="22" y="64" anchorOffsetY="0" multiline="true" anchorOffsetX="0" backgroundColor="0xcccccc" textColor="0x000000" background="true" size="15"/>
+    <e:Button id="resetTextBtn" label="重置内容"  x="75" y="427"/>
+    <e:Button id="closeBtn" label="关闭"  x="173" y="427"/>
+</e:Skin>

@@ -22,4 +22,3 @@ var CThumbUIEvent = (function (_super) {
     return CThumbUIEvent;
 }(egret.Event));
 __reflect(CThumbUIEvent.prototype, "CThumbUIEvent");
-//# sourceMappingURL=CThumbUIEvent.js.map

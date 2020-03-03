@@ -6,9 +6,18 @@
 class CEyeanglePraContainer extends CUIContainer implements IEyeanglePraContainer,INotiParent{
 	public constructor() {
         super();
+        this.m_resNameFinder = new CEyeangle2ResNameFinder();
         this.m_renderFilter = new CEyeangle2RenderFilter();
         this.m_renderFilter.setCaRat(1);
 	}
+
+    private m_resNameFinder:IEyeangle2ResNameFinder;
+    public setResNameFinder(rnf:IEyeangle2ResNameFinder) {
+        this.m_resNameFinder = rnf;
+    }
+    public getResNameFinder():IEyeangle2ResNameFinder {
+        return this.m_resNameFinder;
+    }
 
     public setPraScene(s:IEyeanglePraScene): void {
         this.m_praScene = s;
@@ -138,7 +147,8 @@ class CEyeanglePraContainer extends CUIContainer implements IEyeanglePraContaine
 
         var picXMLTask:gdeint.CPreloadTask = new gdeint.CPreloadTask();
         var resListPicXML:Array<gdeint.ResStruct> = new Array<gdeint.ResStruct>();
-        this.m_seledPicTagArr = gdeint.randomNums_ts(10,4);
+
+        this.m_seledPicTagArr = gdeint.randomNums_ts(13,4); //13张图片中随机选4张。
 
         var i:number;
         for(i=0;i<this.m_seledPicTagArr.length;++i) {
@@ -202,6 +212,9 @@ class CEyeanglePraContainer extends CUIContainer implements IEyeanglePraContaine
                     tmpAngle.m_imgPath = picJsn.pics.pic.imgPath;
 
                     var tmpResName;
+
+
+                    /*
                     var temp = this.m_seledPicTagArr[curTag];
                     if(temp < 10) {
                         tmpResName = "img_00" + temp.toString();
@@ -212,7 +225,12 @@ class CEyeanglePraContainer extends CUIContainer implements IEyeanglePraContaine
                     else {
                         tmpResName = "img_" + temp.toString();
                     }
-                    tmpResName += "_gif";
+                    tmpResName += "_gif";*/
+
+                    var strImgPath:string;
+                    strImgPath = picJsn.pics.pic.imgPath.toString();
+                    this.m_resNameFinder.setInp(strImgPath);
+                    tmpResName = this.m_resNameFinder.getResult();
 
                     tmpAngle.m2_imgResName = tmpResName;
 

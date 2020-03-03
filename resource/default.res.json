@@ -394,9 +394,9 @@
 			"url": "pics/Eyeangle/img_001.gif"
 		},
 		{
-			"name": "img_002_gif",
+			"name": "img_002_png",
 			"type": "image",
-			"url": "pics/Eyeangle/img_002.gif"
+			"url": "pics/Eyeangle/img_002.png"
 		},
 		{
 			"name": "img_003_gif",
@@ -419,9 +419,9 @@
 			"url": "pics/Eyeangle/img_006.gif"
 		},
 		{
-			"name": "img_007_gif",
+			"name": "img_007_png",
 			"type": "image",
-			"url": "pics/Eyeangle/img_007.gif"
+			"url": "pics/Eyeangle/img_007.png"
 		},
 		{
 			"name": "img_008_gif",
@@ -437,6 +437,21 @@
 			"name": "img_010_gif",
 			"type": "image",
 			"url": "pics/Eyeangle/img_010.gif"
+		},
+		{
+			"name": "img_011_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_011.png"
+		},
+		{
+			"name": "img_012_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_012.png"
+		},
+		{
+			"name": "img_013_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_013.png"
 		},
 		{
 			"name": "pic001_json",
@@ -487,6 +502,21 @@
 			"name": "pic010_json",
 			"type": "json",
 			"url": "pics/Eyeangle/pic010.json"
+		},
+		{
+			"name": "pic011_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic011.json"
+		},
+		{
+			"name": "pic012_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic012.json"
+		},
+		{
+			"name": "pic013_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic013.json"
 		},
 		{
 			"name": "localVer_json",

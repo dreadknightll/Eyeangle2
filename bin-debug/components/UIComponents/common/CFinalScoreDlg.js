@@ -62,4 +62,3 @@ var eyeangle2;
     eyeangle2.CFinalScoreDlg = CFinalScoreDlg;
     __reflect(CFinalScoreDlg.prototype, "eyeangle2.CFinalScoreDlg");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CFinalScoreDlg.js.map

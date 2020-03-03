@@ -65,4 +65,3 @@ var CNoChangeRenderFilter = (function () {
 }());
 __reflect(CNoChangeRenderFilter.prototype, "CNoChangeRenderFilter", ["IEyeangle2RenderFilter", "IRectRenderFilter", "IRenderFilter", "IAngleRenderFilter", "IRenderFilterWithCa"]);
 ;
-//# sourceMappingURL=CNoChangeRenderFilterAngle.js.map

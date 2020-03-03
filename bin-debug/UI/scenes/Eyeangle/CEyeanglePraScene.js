@@ -196,6 +196,13 @@ var eyeangle2;
                 imgRect = this.m_UIPresenter.getImgRect();
                 this.midArea.img.width = imgRect.m_width;
                 this.midArea.img.height = imgRect.m_height;
+                // 设置mask避免图片显示在场景以外。iOS模拟器测试能显示大图片时能看到结果。
+                var maskRect = new egret.Rectangle();
+                maskRect.x = 0;
+                maskRect.y = 0;
+                maskRect.width = this.m_winWidth;
+                maskRect.height = this.m_winHeight;
+                this.mask = maskRect;
                 /*
                     换了图片：框移到右上角；
                     没换图片：框回到原来的位置：
@@ -540,4 +547,3 @@ var eyeangle2;
     __reflect(CEyeanglePraScene.prototype, "eyeangle2.CEyeanglePraScene", ["IEyeanglePraScene", "IScene", "IHidable", "INotiParent", "IContainerPlugin"]);
     ;
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CEyeanglePraScene.js.map

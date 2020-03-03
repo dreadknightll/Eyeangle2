@@ -20,4 +20,3 @@ var CPage = (function () {
     return CPage;
 }());
 __reflect(CPage.prototype, "CPage", ["IPage", "IHidable"]);
-//# sourceMappingURL=CPage.js.map

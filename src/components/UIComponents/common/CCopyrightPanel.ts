@@ -78,7 +78,12 @@
 			public closeBtn:eui.Button;
 			public arrowUp:eui.Image;
 			public arrowDown:eui.Image;
-			public s_cpText:string = "//////////////////////////////////////////////////////////////////////////////////////\n\
+
+			public s_cpText:string = "\n    Copyright (C) 2019-present, 梁力，MIT许可。\n\
+				注：部分运行库和素材为第三方版权所有，擅自提取使用可能造成侵权！\n\
+				白鹭引擎版权声明在白鹭科技官网上的有关产品可找到。";
+
+/*			public s_cpText:string = "//////////////////////////////////////////////////////////////////////////////////////\n\
 		//\n\
 		//  Copyright (c) 2014-present, Egret Technology.\n\
 		//  All rights reserved.\n\
@@ -105,6 +110,6 @@
 		//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,\n\
 		//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\
 		//\n\
-		//////////////////////////////////////////////////////////////////////////////////////";
+		//////////////////////////////////////////////////////////////////////////////////////";*/
 		}
 	}

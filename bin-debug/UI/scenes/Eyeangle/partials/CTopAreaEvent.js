@@ -24,4 +24,3 @@ var CTopAreaEvent = (function (_super) {
     return CTopAreaEvent;
 }(egret.Event));
 __reflect(CTopAreaEvent.prototype, "CTopAreaEvent");
-//# sourceMappingURL=CTopAreaEvent.js.map

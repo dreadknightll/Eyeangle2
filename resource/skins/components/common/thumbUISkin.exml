@@ -4,7 +4,7 @@
 	<e:Image id="thumbSel" width="120" height="100" source="thumb_sel_png" y="5" x="10"
 	         visible="true" />
     <e:Group id="midLayerGrp" width="100%" height="100%" x="0" y="0">
-	    <e:Label id="thumbQuestioner" text="?" size="24" textColor="0xFFFF00" y="80" x="28" bold="true"/>
+	    <e:Label id="thumbQuestioner" text="?" size="24" textColor="0xFFFF00" y="80" x="28" bold="true" stroke="1" strokeColor="0xff0000"/>
     </e:Group>
 	<e:Rect id="thumbCover" width="150" height="120" y="0" x="0" alpha="0.0" />
 </e:Skin>

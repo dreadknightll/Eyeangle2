@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="welcomeSceneSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:eyeangle2="eyeangle2.*">
+    <e:Rect width="100%" height="100%" fillColor="0xFFFFFF"/>
+
+	<e:Group x="59.5" y="84.5" anchorOffsetY="0" height="109" anchorOffsetX="0" width="359">
+	   	<e:Image source="eyeangle2_logo_png" y="6.5" width="95" height="95" x="8"/>
+    	<e:Label text="宜英角眼通2——\n角度目测训练" x="109" y="25.5" textColor="0x000000" />
+	</e:Group>
+
+
+	<e:Group x="9.37" y="280" anchorOffsetX="0" width="460" anchorOffsetY="0" height="383">
+
+		<e:Group x="5" y="5" anchorOffsetX="0" width="452.67" anchorOffsetY="0" height="48.33">
+			<e:Rect width="450" height="45" anchorOffsetX="0" anchorOffsetY="0" alpha="0.4" fillColor="0x86c93a"/>
+			<e:CheckBox id="userProRead" x="58" y="10" touchEnabled="true"/>
+			<e:Label id="userProLabel" text="我已阅读并同意《用户协议》" x="85" y="11" textColor="0x000000" size="20"/>
+			<e:Label text="1"  y="6" x="12" bold="true"/>
+
+		</e:Group>
+
+		<e:Group x="5" y="55" anchorOffsetX="0" width="448">
+			<e:Rect width="450" height="45"  anchorOffsetX="0" alpha="0.4" fillColor="0xd1c3a3"/>
+	    	<e:CheckBox id="priPoliRead" x="58" y="10" touchEnabled="true"/>
+			<e:Label id="priPoliLabel" text="我已阅读并同意《隐私政策》" x="85" y="11" textColor="0x000000" size="20"/>
+			<e:Label text="2"  y="6" x="12" bold="true"/>
+
+		</e:Group>
+
+		<e:Group x="5" y="105" anchorOffsetX="0" width="449" anchorOffsetY="0" height="55">
+			<e:Rect width="450" height="60"  anchorOffsetX="0" anchorOffsetY="0" alpha="0.4" fillColor="0x575793"/>
+	    	<e:CheckBox id="horverChecked" label="" x="58" y="18" touchEnabled="true"/>
+			<e:Label id="horverLabel" text="我已认真进行横竖检验并仔细阅读相\n关说明" x="85" y="11" textColor="0x000000" size="20"/>
+			<e:Label text="3"  y="12" x="12" bold="true"/>
+		</e:Group>
+
+		<e:Group x="5" y="170" anchorOffsetX="0" width="448" anchorOffsetY="0" height="66">
+			<e:Rect width="450" height="60"  anchorOffsetX="0" fillColor="0xefd5d5"/>
+			<e:Button id="startBtn" label="开始练习" x="176.33" y="6" touchEnabled="true" enabled="false"/>
+			<e:Label text="4 GO！"  y="12" x="12" bold="true" size="36" />
+		</e:Group>
+	</e:Group>
+
+	<e:Image id="showCRBtn" source="copyright_png" x="277" y="720" anchorOffsetX="0" width="60" anchorOffsetY="0" height="60"/>
+	<e:Image height="60" width="112" source="eint_logo_png" x="339" y="720"/>
+
+	<e:Button id="helpBtn" label="指引" x="32" y="725" touchEnabled="true" />
+
+	<eyeangle2:CCopyrightPanel_V2 id="crPanel" width="400" height="640" x="38.36" y="65.42" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	<eyeangle2:CUserProPanel id="userProPanel" width="400" height="640" x="38.36" y="65.42" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	<eyeangle2:CHelpPanel id="helpPanel" width="400" height="640" x="38.36" y="65.42" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	<eyeangle2:CPrivacyPolicyPanel id="priPoliPanel" width="400" height="640" x="38.36" y="65.42" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	<eyeangle2:CHorverCheckPanel id="horverCheckPanel" y="100" horizontalCenter="0" visible="false"/>
+</e:Skin>

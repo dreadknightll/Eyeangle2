@@ -97,4 +97,3 @@ var eyeangle2;
     eyeangle2.CTopArea = CTopArea;
     __reflect(CTopArea.prototype, "eyeangle2.CTopArea");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CTopArea.js.map

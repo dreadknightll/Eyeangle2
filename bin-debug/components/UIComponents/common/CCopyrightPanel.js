@@ -20,34 +20,9 @@ var eyeangle2;
         __extends(CCopyrightPanel, _super);
         function CCopyrightPanel() {
             var _this = _super.call(this) || this;
-            _this.s_cpText = "//////////////////////////////////////////////////////////////////////////////////////\n\
-		//\n\
-		//  Copyright (c) 2014-present, Egret Technology.\n\
-		//  All rights reserved.\n\
-		//  Redistribution and use in source and binary forms, with or without\n\
-		//  modification, are permitted provided that the following conditions are met:\n\
-		//\n\
-		//     * Redistributions of source code must retain the above copyright\n\
-		//       notice, this list of conditions and the following disclaimer.\n\
-		//     * Redistributions in binary form must reproduce the above copyright\n\
-		//       notice, this list of conditions and the following disclaimer in the\n\
-		//       documentation and/or other materials provided with the distribution.\n\
-		//     * Neither the name of the Egret nor the\n\
-		//       names of its contributors may be used to endorse or promote products\n\
-		//       derived from this software without specific prior written permission.\n\
-		//\n\
-		//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS\n\
-		//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES\n\
-		//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.\n\
-		//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,\n\
-		//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n\
-		//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,\n\
-		//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\n\
-		//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\n\
-		//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,\n\
-		//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\
-		//\n\
-		//////////////////////////////////////////////////////////////////////////////////////";
+            _this.s_cpText = "\n    Copyright (C) 2019-present, 梁力，MIT许可。\n\
+				注：部分运行库和素材为第三方版权所有，擅自提取使用可能造成侵权！\n\
+				白鹭引擎版权声明在白鹭科技官网上的有关产品可找到。";
             _this.m_content = new egret.TextField();
             _this.m_content.x = 42;
             _this.m_content.y = 141;
@@ -99,4 +74,3 @@ var eyeangle2;
     eyeangle2.CCopyrightPanel = CCopyrightPanel;
     __reflect(CCopyrightPanel.prototype, "eyeangle2.CCopyrightPanel");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CCopyrightPanel.js.map

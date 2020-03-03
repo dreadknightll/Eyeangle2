@@ -61,7 +61,7 @@ var S_NATIVE_ANDROID = 2;
 var S_NATIVE_IOS = 3;
 var S_NATIVE_WP = 4;
 var S_WECHAT = 5; // 不能上线。无著作权。
-var S_BUILD_FOR = S_NATIVE_ANDROID;
+var S_BUILD_FOR = S_NATIVE_IOS;
 var S_CHECK_UPDATE_ANDROID = false; // 是否检查更新。
 var g_welcomeScene; //欢迎画面。
 var g_welcomePage;
@@ -209,7 +209,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createScene = function () {
-        g_welcomeScene = new eyeangle2.CWelcomeScene_Eyeangle2();
+        g_welcomeScene = new eyeangle2.CWelcomeScene_Eyeangle2_V2();
         g_welcomeScene.scaleX = g_scale;
         g_welcomeScene.scaleY = g_scale;
         g_welcomeScene.x = g_scenePos.m_x;
@@ -270,4 +270,3 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
-//# sourceMappingURL=Main.js.map

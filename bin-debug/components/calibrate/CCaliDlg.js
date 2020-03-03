@@ -291,4 +291,3 @@ var eyeangle2;
     eyeangle2.CCaliDlg = CCaliDlg;
     __reflect(CCaliDlg.prototype, "eyeangle2.CCaliDlg", ["ICaliDlgPlugin", "ICaliDlg", "IHidable", "IContainerPlugin"]);
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CCaliDlg.js.map

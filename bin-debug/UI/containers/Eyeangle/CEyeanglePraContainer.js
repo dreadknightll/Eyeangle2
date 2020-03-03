@@ -18,10 +18,17 @@ var CEyeanglePraContainer = (function (_super) {
     function CEyeanglePraContainer() {
         var _this = _super.call(this) || this;
         _this.m_visibilityTempScene = false;
+        _this.m_resNameFinder = new CEyeangle2ResNameFinder();
         _this.m_renderFilter = new CEyeangle2RenderFilter();
         _this.m_renderFilter.setCaRat(1);
         return _this;
     }
+    CEyeanglePraContainer.prototype.setResNameFinder = function (rnf) {
+        this.m_resNameFinder = rnf;
+    };
+    CEyeanglePraContainer.prototype.getResNameFinder = function () {
+        return this.m_resNameFinder;
+    };
     CEyeanglePraContainer.prototype.setPraScene = function (s) {
         this.m_praScene = s;
         this.m_praScene._setParentContainer(this);
@@ -125,7 +132,7 @@ var CEyeanglePraContainer = (function (_super) {
         preloaderUI.setCompleteListener(this.onPicXMLLoadComplete, this);
         var picXMLTask = new gdeint.CPreloadTask();
         var resListPicXML = new Array();
-        this.m_seledPicTagArr = gdeint.randomNums_ts(10, 4);
+        this.m_seledPicTagArr = gdeint.randomNums_ts(13, 4); //13张图片中随机选4张。
         var i;
         for (i = 0; i < this.m_seledPicTagArr.length; ++i) {
             resListPicXML[i] = new gdeint.ResStruct();
@@ -173,17 +180,22 @@ var CEyeanglePraContainer = (function (_super) {
                 tmpAngle.m_angleValue = parseFloat(picJsn.pics.pic.angles.angle[i].angleValue);
                 tmpAngle.m_imgPath = picJsn.pics.pic.imgPath;
                 var tmpResName;
+                /*
                 var temp = this.m_seledPicTagArr[curTag];
-                if (temp < 10) {
+                if(temp < 10) {
                     tmpResName = "img_00" + temp.toString();
                 }
-                else if (temp < 100) {
+                else if(temp < 100) {
                     tmpResName = "img_0" + temp.toString();
                 }
                 else {
                     tmpResName = "img_" + temp.toString();
                 }
-                tmpResName += "_gif";
+                tmpResName += "_gif";*/
+                var strImgPath;
+                strImgPath = picJsn.pics.pic.imgPath.toString();
+                this.m_resNameFinder.setInp(strImgPath);
+                tmpResName = this.m_resNameFinder.getResult();
                 tmpAngle.m2_imgResName = tmpResName;
                 tmpAngles.push(tmpAngle);
             }
@@ -250,4 +262,3 @@ var CEyeanglePraContainer = (function (_super) {
     return CEyeanglePraContainer;
 }(CUIContainer));
 __reflect(CEyeanglePraContainer.prototype, "CEyeanglePraContainer", ["IEyeanglePraContainer"]);
-//# sourceMappingURL=CEyeanglePraContainer.js.map

@@ -31,4 +31,3 @@ var CPage2EuiAdapter = (function (_super) {
 }(CPage));
 __reflect(CPage2EuiAdapter.prototype, "CPage2EuiAdapter");
 ;
-//# sourceMappingURL=CPage2EuiAdapter.js.map

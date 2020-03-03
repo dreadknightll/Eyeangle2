@@ -19,11 +19,11 @@ const S_NATIVE_IOS:number = 3;
 const S_NATIVE_WP:number = 4;
 const S_WECHAT:number = 5; // 不能上线。无著作权。
 
-const S_BUILD_FOR:number = S_NATIVE_ANDROID;
+const S_BUILD_FOR:number = S_NATIVE_IOS;
 
 var S_CHECK_UPDATE_ANDROID: boolean = false; // 是否检查更新。
 
-var g_welcomeScene: eyeangle2.CWelcomeScene_Eyeangle2; //欢迎画面。
+var g_welcomeScene: eyeangle2.CWelcomeScene_Eyeangle2_V2; //欢迎画面。
 var g_welcomePage:CWelcomePage_Eyeangle2;
 
 var g_praScene: eyeangle2.CEyeanglePraScene; //练习画面。
@@ -162,7 +162,7 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createScene(): void {
-        g_welcomeScene = new eyeangle2.CWelcomeScene_Eyeangle2();
+        g_welcomeScene = new eyeangle2.CWelcomeScene_Eyeangle2_V2();
         g_welcomeScene.scaleX = g_scale;
         g_welcomeScene.scaleY = g_scale;
         g_welcomeScene.x = g_scenePos.m_x;

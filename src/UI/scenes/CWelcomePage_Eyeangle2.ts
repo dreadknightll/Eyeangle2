@@ -1,7 +1,7 @@
 class CWelcomePage_Eyeangle2 implements IPage {
 
     private m_commonPage:CPage;
-    public m_scene:eyeangle2.CWelcomeScene_Eyeangle2;
+    public m_scene:eyeangle2.CWelcomeScene_Eyeangle2_V2;
 
     public constructor() {
         this.m_commonPage = new CPage();

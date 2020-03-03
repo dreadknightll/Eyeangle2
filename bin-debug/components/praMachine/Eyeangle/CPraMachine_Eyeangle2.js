@@ -175,4 +175,3 @@ var CPraMachine_Eyeangle2 = (function () {
     return CPraMachine_Eyeangle2;
 }());
 __reflect(CPraMachine_Eyeangle2.prototype, "CPraMachine_Eyeangle2", ["IEyeanglePraMachine", "IPraMachine"]);
-//# sourceMappingURL=CPraMachine_Eyeangle2.js.map
