@@ -25,3 +25,4 @@ var CAngleInputterEvent = (function (_super) {
     return CAngleInputterEvent;
 }(egret.Event));
 __reflect(CAngleInputterEvent.prototype, "CAngleInputterEvent");
+//# sourceMappingURL=CAngleInputterEvent.js.map

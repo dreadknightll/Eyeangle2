@@ -45,8 +45,7 @@
     },
     "ios": {
       "appname": "宜英角眼通2",
-      "packagename": "org.gdeint.Eyeangle",
-      "hybrid": false
+      "packagename": "org.gdeint.Eyeangle"
     }
   }
 }

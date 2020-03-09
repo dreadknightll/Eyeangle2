@@ -149,6 +149,7 @@ class CEyeanglePraContainer extends CUIContainer implements IEyeanglePraContaine
         var resListPicXML:Array<gdeint.ResStruct> = new Array<gdeint.ResStruct>();
 
         this.m_seledPicTagArr = gdeint.randomNums_ts(13,4); //13张图片中随机选4张。
+//        this.m_seledPicTagArr = [12,8]; //13张图片中随机选4张。
 
         var i:number;
         for(i=0;i<this.m_seledPicTagArr.length;++i) {

@@ -117,3 +117,4 @@ var CEyeangle2_winModel = (function () {
     return CEyeangle2_winModel;
 }());
 __reflect(CEyeangle2_winModel.prototype, "CEyeangle2_winModel", ["IEyeangle2WinModel", "ITMBWinModel", "IWinModel"]);
+//# sourceMappingURL=CEyeangle2_winModel.js.map

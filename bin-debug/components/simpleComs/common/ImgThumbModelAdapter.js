@@ -87,3 +87,4 @@ var ImgThumbModelAdapter = (function () {
     return ImgThumbModelAdapter;
 }());
 __reflect(ImgThumbModelAdapter.prototype, "ImgThumbModelAdapter");
+//# sourceMappingURL=ImgThumbModelAdapter.js.map

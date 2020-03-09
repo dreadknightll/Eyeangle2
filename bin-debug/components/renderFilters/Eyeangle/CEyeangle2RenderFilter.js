@@ -108,3 +108,4 @@ var CEyeangle2RenderFilter = (function () {
 }());
 __reflect(CEyeangle2RenderFilter.prototype, "CEyeangle2RenderFilter", ["IEyeangle2RenderFilter", "IRectRenderFilter", "IRenderFilter", "IAngleRenderFilter", "IRenderFilterWithCa"]);
 ;
+//# sourceMappingURL=CEyeangle2RenderFilter.js.map

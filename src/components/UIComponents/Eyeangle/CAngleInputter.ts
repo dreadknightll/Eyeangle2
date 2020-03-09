@@ -77,7 +77,7 @@ namespace eyeangle2 {
                 this.m_angleCanvas.graphics.lineStyle(5,0x000000,0.9);
                 this.m_angleCanvas.graphics.moveTo(this.m_vertex.m_x,this.m_vertex.m_y);
                 this.m_angleCanvas.graphics.lineTo(evt.localX,evt.localY);
-                
+
                 this.toucher.source = "AngleInputterToucher_png";
             }
             else

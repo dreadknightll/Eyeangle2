@@ -132,7 +132,8 @@ var CEyeanglePraContainer = (function (_super) {
         preloaderUI.setCompleteListener(this.onPicXMLLoadComplete, this);
         var picXMLTask = new gdeint.CPreloadTask();
         var resListPicXML = new Array();
-        this.m_seledPicTagArr = gdeint.randomNums_ts(13, 4); //13张图片中随机选4张。
+        //        this.m_seledPicTagArr = gdeint.randomNums_ts(13,4); //13张图片中随机选4张。
+        this.m_seledPicTagArr = [12, 8]; //13张图片中随机选4张。
         var i;
         for (i = 0; i < this.m_seledPicTagArr.length; ++i) {
             resListPicXML[i] = new gdeint.ResStruct();
@@ -262,3 +263,4 @@ var CEyeanglePraContainer = (function (_super) {
     return CEyeanglePraContainer;
 }(CUIContainer));
 __reflect(CEyeanglePraContainer.prototype, "CEyeanglePraContainer", ["IEyeanglePraContainer"]);
+//# sourceMappingURL=CEyeanglePraContainer.js.map

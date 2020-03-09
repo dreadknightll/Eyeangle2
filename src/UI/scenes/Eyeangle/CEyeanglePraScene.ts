@@ -650,20 +650,44 @@ namespace eyeangle2 {
             }
             this.midArea.midContentGroup.x = this.m_UIPresenter.getImgRect().m_left;
             this.midArea.midContentGroup.y = this.m_UIPresenter.getImgRect().m_top;
-            
-            // 重画待测角度：
-            this.midArea.m_midCanvas.graphics.clear();
-            this.midArea.m_midCanvas.graphics.lineStyle(5,0x000000,0.9);
 
-            var tmpPt:gdeint.CPoint;
-            tmpPt = this.m_UIPresenter.rfgetScrAngleVertexPt();
-            this.midArea.m_midCanvas.graphics.moveTo(tmpPt.m_x,tmpPt.m_y);
-            tmpPt = this.m_UIPresenter.rfgetScrAngleEdge1Pt();
-            this.midArea.m_midCanvas.graphics.lineTo(tmpPt.m_x,tmpPt.m_y);
-            tmpPt = this.m_UIPresenter.rfgetScrAngleVertexPt();
-            this.midArea.m_midCanvas.graphics.moveTo(tmpPt.m_x,tmpPt.m_y);
-            tmpPt = this.m_UIPresenter.rfgetScrAngleEdge2Pt();
-            this.midArea.m_midCanvas.graphics.lineTo(tmpPt.m_x,tmpPt.m_y);
+            // 重画待测角度：
+/*            this.midArea.m_midCanvasOld.graphics.clear();
+            this.midArea.m_midCanvasOld.graphics.lineStyle(5,0x000000,0.9);*/
+            this.midArea.m_midAngleCanvas.graphics.clear();
+            this.midArea.m_midAngleCanvas.graphics.lineStyle(5,0x000000,0.9);
+
+            var tmpPt1,tmpPt2,tmpPt3,tmpPt4:gdeint.CPoint;
+            tmpPt1 = this.m_UIPresenter.rfgetScrAngleVertexPt();
+            tmpPt2 = this.m_UIPresenter.rfgetScrAngleEdge1Pt();
+            tmpPt3 = this.m_UIPresenter.rfgetScrAngleVertexPt();
+            tmpPt4 = this.m_UIPresenter.rfgetScrAngleEdge2Pt();
+/*            this.midArea.m_midCanvasOld.graphics.moveTo(tmpPt1.m_x,tmpPt1.m_y);
+            this.midArea.m_midCanvasOld.graphics.lineTo(tmpPt2.m_x,tmpPt2.m_y);
+            this.midArea.m_midCanvasOld.graphics.moveTo(tmpPt3.m_x,tmpPt3.m_y);
+            this.midArea.m_midCanvasOld.graphics.lineTo(tmpPt4.m_x,tmpPt4.m_y);
+*/
+            var tmpPt0:gdeint.CPoint = new gdeint.CPoint();
+
+            var tmpMinX:number = tmpPt1.m_x;
+            tmpMinX = tmpMinX<tmpPt2.m_x?tmpMinX:tmpPt2.m_x;
+            tmpMinX = tmpMinX<tmpPt3.m_x?tmpMinX:tmpPt2.m_x;
+            tmpMinX = tmpMinX<tmpPt4.m_x?tmpMinX:tmpPt2.m_x;
+            tmpPt0.m_x = tmpMinX - 10;
+
+            var tmpMinY:number = tmpPt1.m_y;
+            tmpMinY = tmpMinY<tmpPt2.m_y?tmpMinY:tmpPt2.m_y;
+            tmpMinY = tmpMinY<tmpPt3.m_y?tmpMinY:tmpPt2.m_y;
+            tmpMinY = tmpMinY<tmpPt4.m_y?tmpMinY:tmpPt2.m_y;
+            tmpPt0.m_y = tmpMinY - 10;
+
+
+            this.midArea.m_midAngleCanvas.x = tmpPt0.m_x;
+            this.midArea.m_midAngleCanvas.y = tmpPt0.m_y;
+            this.midArea.m_midAngleCanvas.graphics.moveTo(tmpPt1.m_x-tmpPt0.m_x , tmpPt1.m_y-tmpPt0.m_y);
+            this.midArea.m_midAngleCanvas.graphics.lineTo(tmpPt2.m_x-tmpPt0.m_x , tmpPt2.m_y-tmpPt0.m_y);
+            this.midArea.m_midAngleCanvas.graphics.moveTo(tmpPt3.m_x-tmpPt0.m_x , tmpPt3.m_y-tmpPt0.m_y);
+            this.midArea.m_midAngleCanvas.graphics.lineTo(tmpPt4.m_x-tmpPt0.m_x , tmpPt4.m_y-tmpPt0.m_y);
 
             // 重新调整缩略图：
             this.readjustThumb();

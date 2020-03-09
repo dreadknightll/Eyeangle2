@@ -88,3 +88,4 @@ var eyeangle2;
     eyeangle2.CUserProPanel = CUserProPanel;
     __reflect(CUserProPanel.prototype, "eyeangle2.CUserProPanel");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CUserProPanel.js.map

@@ -107,3 +107,4 @@ function ScoreFlagRect() {
         return ret;
     };
 }
+//# sourceMappingURL=ScoreFlagRect.js.map

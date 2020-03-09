@@ -41,3 +41,4 @@ var CTopSpace = (function (_super) {
     return CTopSpace;
 }(egret.DisplayObjectContainer));
 __reflect(CTopSpace.prototype, "CTopSpace");
+//# sourceMappingURL=CTopSpace.js.map

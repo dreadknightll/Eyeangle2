@@ -57,3 +57,4 @@ var eyeangle2;
     eyeangle2.CThumbUI = CThumbUI;
     __reflect(CThumbUI.prototype, "eyeangle2.CThumbUI");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CThumbUI.js.map

@@ -80,3 +80,4 @@ var eyeangle2;
     eyeangle2.CPrivacyPolicyPanel = CPrivacyPolicyPanel;
     __reflect(CPrivacyPolicyPanel.prototype, "eyeangle2.CPrivacyPolicyPanel");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CPrivacyPolicyPanel.js.map

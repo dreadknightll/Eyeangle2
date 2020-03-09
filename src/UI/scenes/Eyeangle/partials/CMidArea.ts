@@ -8,8 +8,9 @@ namespace eyeangle2 {
         public constructor() {
             super();
             this.m_bg = new egret.Shape();
-            this.m_midCanvas = new egret.Shape();
-            
+//            this.m_midCanvasOld = new egret.Shape();
+            this.m_midAngleCanvas = new egret.Shape();
+
             this.m2_imgTchStartPoint = new gdeint.CPoint();
             this.m2_imgStartPoint = new gdeint.CPoint();
 
@@ -20,7 +21,8 @@ namespace eyeangle2 {
         public midContentGroup:eui.Group;
         public img:eui.Image;
         private midCanvasGrp:eui.Group;
-        public m_midCanvas:egret.Shape; //For drawing angle.
+//        public m_midCanvasOld:egret.Shape; //For drawing angle. (Old)
+        public m_midAngleCanvas:egret.Shape;
 
         private m_trueWidth: number = 0;
         private m_trueHeight:number = 0;
@@ -46,7 +48,8 @@ namespace eyeangle2 {
             this.mask = rect;
 
             this.midBgGrp.addChild(this.m_bg);
-            this.midCanvasGrp.addChild(this.m_midCanvas);
+//            this.midCanvasGrp.addChild(this.m_midCanvasOld);
+            this.midCanvasGrp.addChild(this.m_midAngleCanvas);
 
             this.img.touchEnabled = true;
             this.img.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.touchBegin,this);

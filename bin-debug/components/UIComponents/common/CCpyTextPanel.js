@@ -43,3 +43,4 @@ var eyeangle2;
     eyeangle2.CCpyTextPanel = CCpyTextPanel;
     __reflect(CCpyTextPanel.prototype, "eyeangle2.CCpyTextPanel");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CCpyTextPanel.js.map
