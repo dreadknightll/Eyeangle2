@@ -22,7 +22,7 @@ namespace eyeangle2 {
         public img:eui.Image;
         private midCanvasGrp:eui.Group;
 //        public m_midCanvasOld:egret.Shape; //For drawing angle. (Old)
-        public m_midAngleCanvas:egret.Shape;
+        public m_midAngleCanvas:egret.Shape; //用于画角度。x、y坐标需要根据角度位置移动。Shape尺寸过大在iOS下会产生错误。
 
         private m_trueWidth: number = 0;
         private m_trueHeight:number = 0;
