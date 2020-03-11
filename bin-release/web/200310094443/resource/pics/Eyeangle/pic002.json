@@ -1,0 +1,47 @@
+{
+  "pics": {
+    "pic": {
+      "imgPath": "img_002.png",
+      "angles": {
+        "angle": [
+          {
+            "vertex": {
+              "x": "98",
+              "y": "237"
+            },
+            "edge1Angle": "30",
+            "edge1Len": "140",
+            "angleValue": "77"
+          },
+          {
+            "vertex": {
+              "x": "1697",
+              "y": "432"
+            },
+            "edge1Angle": "120",
+            "edge1Len": "230",
+            "angleValue": "123"
+          },
+          {
+            "vertex": {
+              "x": "366",
+              "y": "866"
+            },
+            "edge1Angle": "80",
+            "edge1Len": "280",
+            "angleValue": "111"
+          },
+          {
+            "vertex": {
+              "x": "899",
+              "y": "883"
+            },
+            "edge1Angle": "50",
+            "edge1Len": "260",
+            "angleValue": "45"
+          }
+        ]
+      }
+    }
+  }
+}

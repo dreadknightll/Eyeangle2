@@ -554,10 +554,10 @@ var eyeangle2;
             // 重新调整缩略图：
             this.readjustThumb();
             // 重新调整缩略图上的问号：
-            var questionerPt;
-            questionerPt = this.m_UIPresenter.rfgetScrThQuestionerPt();
-            this.topArea.thumbUI.thumbQuestioner.x = questionerPt.m_x;
-            this.topArea.thumbUI.thumbQuestioner.y = questionerPt.m_y;
+            var questionerCenterPt;
+            questionerCenterPt = this.m_UIPresenter.rfgetScrThQuestionerCenterPt();
+            this.topArea.thumbUI.thumbQuestioner.x = questionerCenterPt.m_x - 8;
+            this.topArea.thumbUI.thumbQuestioner.y = questionerCenterPt.m_y - 11;
             // 重新调整缩略图选框：
             this.readjustThumbSel();
         };

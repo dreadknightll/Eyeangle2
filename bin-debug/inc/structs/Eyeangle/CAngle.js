@@ -1,5 +1,5 @@
 /*
- * /src/structs/CAngle.ts
+ * /src/inc/structs/Eyeangle/CAngle.ts
  *
  * 角度结构体。描述角度。包括边的斜率、长度以及顶点坐标等信息。
  *

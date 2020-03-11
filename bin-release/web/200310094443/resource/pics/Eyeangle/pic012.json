@@ -1,0 +1,56 @@
+{
+  "pics": {
+    "pic": {
+      "imgPath": "img_012.png",
+      "angles": {
+        "angle": [
+          {
+            "vertex": {
+              "x": "300",
+              "y": "250"
+            },
+            "edge1Angle": "120",
+            "edge1Len": "220",
+            "angleValue": "90"
+          },
+          {
+            "vertex": {
+              "x": "340",
+              "y": "830"
+            },
+            "edge1Angle": "180",
+            "edge1Len": "220",
+            "angleValue": "100"
+          },
+          {
+            "vertex": {
+              "x": "950",
+              "y": "90"
+            },
+            "edge1Angle": "240",
+            "edge1Len": "230",
+            "angleValue": "107"
+          },
+          {
+            "vertex": {
+              "x": "750",
+              "y": "1090"
+            },
+            "edge1Angle": "35",
+            "edge1Len": "210",
+            "angleValue": "20"
+          },
+          {
+            "vertex": {
+              "x": "1650",
+              "y": "677"
+            },
+            "edge1Angle": "135",
+            "edge1Len": "210",
+            "angleValue": "50"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,527 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,buttonSnd_mp3,AngleInputterBg_png,AngleInputterToucher_png,AngleInputterToucher_futiled_png,arrow_png,closeBtn_png,copyright_png,eint_logo_png,eyeangle2_logo_png,noBtn_png,noBtnDown_png,noImg_gif,noticeBg_png,ok_button_png,ok_button_disabled_png,ok_button_down_png,progress_arrow_png,progress_cell_png,progress_cell_empty_png,progress_right_png,progress_right_old_png,questioner_png,refreshBtn_png,replay_button_png,replay_button_down_png,rippleCircle_png,rulerBodyCell_gif,rulerBodyCell2_gif,ruler_drager_png,ruler_head_png,scoreFrame_png,score_cross_png,score_dot_png,score_flag_png,square1_png,square2_png,square3_png,star_empty_png,star_full_png,thumb_sel_png,tipBalloon_png,top_screen_button_down_png,top_screen_button_up_png,top_screen_closed_png,top_screen_open_png,wait_gif,yesBtn_png,yesBtnDown_png,img_001_gif,img_002_gif,img_003_gif,img_004_gif,img_005_gif,img_006_gif,img_007_gif,img_008_gif,img_009_gif,img_010_gif,pic001_json,pic002_json,pic003_json,pic004_json,pic005_json,pic006_json,pic007_json,pic008_json,pic009_json,pic010_json,localVer_json",
+			"name": "preload"
+		},
+		{
+			"keys": "eint_logo_png",
+			"name": "logo"
+		},
+		{
+			"keys": "buttonSnd_mp3,top_screen_open_png,top_screen_closed_png,top_screen_button_down_png,top_screen_button_up_png,noImg_gif,thumb_sel_png,score_dot_png,score_flag_png,score_cross_png,progress_cell_png,progress_cell_empty_png,star_empty_png,star_full_png,replay_button_png,replay_button_down_png,closeBtn_png,refreshBtn_png,arrow_png,yesBtn_png,yesBtnDown_png,noBtn_png,noBtnDown_png,rippleCircle_png",
+			"name": "eint"
+		},
+		{
+			"keys": "localVer_json,eyeangle2_logo_png,AngleInputterBg_png,AngleInputterToucher_png,scoreFrame_png",
+			"name": "eyeangle"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "buttonSnd_mp3",
+			"type": "sound",
+			"url": "sound/common/buttonSnd.mp3"
+		},
+		{
+			"name": "AngleInputterBg_png",
+			"type": "image",
+			"url": "imgs/AngleInputterBg.png"
+		},
+		{
+			"name": "AngleInputterToucher_png",
+			"type": "image",
+			"url": "imgs/AngleInputterToucher.png"
+		},
+		{
+			"name": "AngleInputterToucher_futiled_png",
+			"type": "image",
+			"url": "imgs/AngleInputterToucher_futiled.png"
+		},
+		{
+			"name": "arrow_png",
+			"type": "image",
+			"url": "imgs/arrow.png"
+		},
+		{
+			"name": "closeBtn_png",
+			"type": "image",
+			"url": "imgs/closeBtn.png"
+		},
+		{
+			"name": "copyright_png",
+			"type": "image",
+			"url": "imgs/copyright.png"
+		},
+		{
+			"name": "eint_logo_png",
+			"type": "image",
+			"url": "imgs/eint_logo.png"
+		},
+		{
+			"name": "eyeangle2_logo_png",
+			"type": "image",
+			"url": "imgs/eyeangle2_logo.png"
+		},
+		{
+			"name": "noBtn_png",
+			"type": "image",
+			"url": "imgs/noBtn.png"
+		},
+		{
+			"name": "noBtnDown_png",
+			"type": "image",
+			"url": "imgs/noBtnDown.png"
+		},
+		{
+			"name": "noImg_gif",
+			"type": "image",
+			"url": "imgs/noImg.gif"
+		},
+		{
+			"name": "noticeBg_png",
+			"type": "image",
+			"url": "imgs/noticeBg.png"
+		},
+		{
+			"name": "ok_button_png",
+			"type": "image",
+			"url": "imgs/ok_button.png"
+		},
+		{
+			"name": "ok_button_disabled_png",
+			"type": "image",
+			"url": "imgs/ok_button_disabled.png"
+		},
+		{
+			"name": "ok_button_down_png",
+			"type": "image",
+			"url": "imgs/ok_button_down.png"
+		},
+		{
+			"name": "progress_arrow_png",
+			"type": "image",
+			"url": "imgs/progress_arrow.png"
+		},
+		{
+			"name": "progress_cell_png",
+			"type": "image",
+			"url": "imgs/progress_cell.png"
+		},
+		{
+			"name": "progress_cell_empty_png",
+			"type": "image",
+			"url": "imgs/progress_cell_empty.png"
+		},
+		{
+			"name": "progress_right_png",
+			"type": "image",
+			"url": "imgs/progress_right.png"
+		},
+		{
+			"name": "progress_right_old_png",
+			"type": "image",
+			"url": "imgs/progress_right_old.png"
+		},
+		{
+			"name": "questioner_png",
+			"type": "image",
+			"url": "imgs/questioner.png"
+		},
+		{
+			"name": "refreshBtn_png",
+			"type": "image",
+			"url": "imgs/refreshBtn.png"
+		},
+		{
+			"name": "replay_button_png",
+			"type": "image",
+			"url": "imgs/replay_button.png"
+		},
+		{
+			"name": "replay_button_down_png",
+			"type": "image",
+			"url": "imgs/replay_button_down.png"
+		},
+		{
+			"name": "rippleCircle_png",
+			"type": "image",
+			"url": "imgs/rippleCircle.png"
+		},
+		{
+			"name": "rulerBodyCell_gif",
+			"type": "image",
+			"url": "imgs/rulerBodyCell.gif"
+		},
+		{
+			"name": "rulerBodyCell2_gif",
+			"type": "image",
+			"url": "imgs/rulerBodyCell2.gif"
+		},
+		{
+			"name": "ruler_drager_png",
+			"type": "image",
+			"url": "imgs/ruler_drager.png"
+		},
+		{
+			"name": "ruler_head_png",
+			"type": "image",
+			"url": "imgs/ruler_head.png"
+		},
+		{
+			"name": "scoreFrame_png",
+			"type": "image",
+			"url": "imgs/scoreFrame.png"
+		},
+		{
+			"name": "score_cross_png",
+			"type": "image",
+			"url": "imgs/score_cross.png"
+		},
+		{
+			"name": "score_dot_png",
+			"type": "image",
+			"url": "imgs/score_dot.png"
+		},
+		{
+			"name": "score_flag_png",
+			"type": "image",
+			"url": "imgs/score_flag.png"
+		},
+		{
+			"name": "square1_png",
+			"type": "image",
+			"url": "imgs/square1.png"
+		},
+		{
+			"name": "square2_png",
+			"type": "image",
+			"url": "imgs/square2.png"
+		},
+		{
+			"name": "square3_png",
+			"type": "image",
+			"url": "imgs/square3.png"
+		},
+		{
+			"name": "star_empty_png",
+			"type": "image",
+			"url": "imgs/star_empty.png"
+		},
+		{
+			"name": "star_full_png",
+			"type": "image",
+			"url": "imgs/star_full.png"
+		},
+		{
+			"name": "thumb_sel_png",
+			"type": "image",
+			"url": "imgs/thumb_sel.png"
+		},
+		{
+			"name": "tipBalloon_png",
+			"type": "image",
+			"url": "imgs/tipBalloon.png"
+		},
+		{
+			"name": "top_screen_button_down_png",
+			"type": "image",
+			"url": "imgs/top_screen_button_down.png"
+		},
+		{
+			"name": "top_screen_button_up_png",
+			"type": "image",
+			"url": "imgs/top_screen_button_up.png"
+		},
+		{
+			"name": "top_screen_closed_png",
+			"type": "image",
+			"url": "imgs/top_screen_closed.png"
+		},
+		{
+			"name": "top_screen_open_png",
+			"type": "image",
+			"url": "imgs/top_screen_open.png"
+		},
+		{
+			"name": "wait_gif",
+			"type": "image",
+			"url": "imgs/wait.gif"
+		},
+		{
+			"name": "yesBtn_png",
+			"type": "image",
+			"url": "imgs/yesBtn.png"
+		},
+		{
+			"name": "yesBtnDown_png",
+			"type": "image",
+			"url": "imgs/yesBtnDown.png"
+		},
+		{
+			"name": "img_001_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_001.gif"
+		},
+		{
+			"name": "img_002_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_002.png"
+		},
+		{
+			"name": "img_003_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_003.gif"
+		},
+		{
+			"name": "img_004_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_004.gif"
+		},
+		{
+			"name": "img_005_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_005.gif"
+		},
+		{
+			"name": "img_006_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_006.gif"
+		},
+		{
+			"name": "img_007_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_007.png"
+		},
+		{
+			"name": "img_008_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_008.gif"
+		},
+		{
+			"name": "img_009_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_009.gif"
+		},
+		{
+			"name": "img_010_gif",
+			"type": "image",
+			"url": "pics/Eyeangle/img_010.gif"
+		},
+		{
+			"name": "img_011_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_011.png"
+		},
+		{
+			"name": "img_012_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_012.png"
+		},
+		{
+			"name": "img_013_png",
+			"type": "image",
+			"url": "pics/Eyeangle/img_013.png"
+		},
+		{
+			"name": "pic001_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic001.json"
+		},
+		{
+			"name": "pic002_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic002.json"
+		},
+		{
+			"name": "pic003_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic003.json"
+		},
+		{
+			"name": "pic004_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic004.json"
+		},
+		{
+			"name": "pic005_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic005.json"
+		},
+		{
+			"name": "pic006_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic006.json"
+		},
+		{
+			"name": "pic007_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic007.json"
+		},
+		{
+			"name": "pic008_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic008.json"
+		},
+		{
+			"name": "pic009_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic009.json"
+		},
+		{
+			"name": "pic010_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic010.json"
+		},
+		{
+			"name": "pic011_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic011.json"
+		},
+		{
+			"name": "pic012_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic012.json"
+		},
+		{
+			"name": "pic013_json",
+			"type": "json",
+			"url": "pics/Eyeangle/pic013.json"
+		},
+		{
+			"name": "localVer_json",
+			"type": "json",
+			"url": "config/localVer.json"
+		}
+	]
+}

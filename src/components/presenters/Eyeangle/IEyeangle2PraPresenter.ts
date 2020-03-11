@@ -29,5 +29,5 @@ interface IEyeangle2PraPresenter extends IPraPresenter,IPresenterWithThumb,IPres
     rfgetScrAngleVertexPt(): gdeint.CPoint;
     rfgetScrAngleEdge1Pt(): gdeint.CPoint;
     rfgetScrAngleEdge2Pt(): gdeint.CPoint;
-    rfgetScrThQuestionerPt(): gdeint.CPoint;
+    rfgetScrThQuestionerCenterPt(): gdeint.CPoint;
 }

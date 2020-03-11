@@ -1,0 +1,38 @@
+{
+  "pics": {
+    "pic": {
+      "imgPath": "img_003.gif",
+      "angles": {
+        "angle": [
+          {
+            "vertex": {
+              "x": "432",
+              "y": "323"
+            },
+            "edge1Angle": "80",
+            "edge1Len": "70",
+            "angleValue": "35"
+          },
+          {
+            "vertex": {
+              "x": "78",
+              "y": "32"
+            },
+            "edge1Angle": "125",
+            "edge1Len": "70",
+            "angleValue": "66"
+          },
+          {
+            "vertex": {
+              "x": "321",
+              "y": "222"
+            },
+            "edge1Angle": "80",
+            "edge1Len": "160",
+            "angleValue": "125"
+          }
+        ]
+      }
+    }
+  }
+}

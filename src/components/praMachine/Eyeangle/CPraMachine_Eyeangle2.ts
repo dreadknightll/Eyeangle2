@@ -1,5 +1,5 @@
 /**
- * /src/components/CPraMachine_Eyeangle2.ts
+ * /src/components/praMachine/Eyeangle/CPraMachine_Eyeangle2.ts
  * 
  * 练习机器模型。是整个程序的中心。用来处理练习相关的数据和逻辑。计分、进入下一角度、练习结束判断等的内部数据处理都在这里进行。
  * setAngleArr -> startPra -> ......

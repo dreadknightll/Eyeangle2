@@ -1,6 +1,6 @@
 /**
  *
- * /src/components/ImgThumbModelAdapter.ts
+ * /src/components/simpleComs/common/ImgThumbModelAdapter.ts
  * 
  * ImgThumbModel 的转接器。把 ImgThumbModel 转接成 Typescript 以便调用。
  *

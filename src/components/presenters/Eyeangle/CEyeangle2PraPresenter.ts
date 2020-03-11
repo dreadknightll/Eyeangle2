@@ -1,6 +1,6 @@
 /**
  *
- * /src/components/presenters/CAnglePresenter.ts
+ * /src/components/presenters/Eyeangle/CEyeangle2PraPresenter.ts
  * 
  * 练习界面的Presenter。包含待显示元素的坐标计算等。可单元测试。
  *
@@ -573,9 +573,9 @@ class CEyeangle2PraPresenter implements IEyeangle2PraPresenter {
     }
 
     /*
-     * 获得经渲染过滤器输出的缩略图问号坐标。
+     * 获得经渲染过滤器输出的缩略图问号的中心坐标。
      */ 
-    public rfgetScrThQuestionerPt(): gdeint.CPoint {
+    public rfgetScrThQuestionerCenterPt(): gdeint.CPoint {
 //        var thRect:CRect;
 //        thRect = this.getThumbRect();
 
@@ -584,8 +584,8 @@ class CEyeangle2PraPresenter implements IEyeangle2PraPresenter {
         tVertex = this.m_itm.ip2Tp(this.m_renderFilter.ptOConv(this.m_angleVertexPt));
 
         ret = new gdeint.CPoint();
-        ret.m_x = /*thRect.m_left + */tVertex.m_x - 8;
-        ret.m_y = /*thRect.m_top + */tVertex.m_y - 12;
+        ret.m_x = /*thRect.m_left + */tVertex.m_x;
+        ret.m_y = /*thRect.m_top + */tVertex.m_y;
 
         return ret;
     }
