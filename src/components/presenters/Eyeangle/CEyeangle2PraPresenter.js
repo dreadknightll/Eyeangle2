@@ -8,7 +8,7 @@ var CEyeangle2PraPresenter = (function () {
         this.s_thMaxHeight = 120;
         this.m_userAngle = 0;
         this.m_pm = new CPraMachine_Eyeangle2();
-        this.m_itm = new ImgThumbModelAdapter();
+        this.m_itm = new gdeint.ImgThumbModelV2();
         this.m_itm.setThMaxWidth(this.s_thMaxWidth);
         this.m_itm.setThMaxHeight(this.s_thMaxHeight);
         this.m_imgSelRect = new gdeint.CRect();

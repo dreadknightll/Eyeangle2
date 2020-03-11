@@ -19,7 +19,7 @@ var CEyeangle2PraPresenter = (function () {
         this.s_thMaxHeight = 120; // 缩略图最大高度。
         this.m_userAngle = 0; // 用户输入的角度值。
         this.m_pm = new CPraMachine_Eyeangle2();
-        this.m_itm = new ImgThumbModelAdapter();
+        this.m_itm = new gdeint.ImgThumbModelV2();
         this.m_itm.setThMaxWidth(this.s_thMaxWidth);
         this.m_itm.setThMaxHeight(this.s_thMaxHeight);
         this.m_imgSelRect = new gdeint.CRect();

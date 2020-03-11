@@ -9,7 +9,7 @@ class CEyeangle2PraPresenter implements IEyeangle2PraPresenter {
 	public constructor() {
         this.m_pm = new CPraMachine_Eyeangle2();
         
-        this.m_itm = new ImgThumbModelAdapter();
+        this.m_itm = new gdeint.ImgThumbModelV2();
         this.m_itm.setThMaxWidth(this.s_thMaxWidth);
         this.m_itm.setThMaxHeight(this.s_thMaxHeight);
 
@@ -65,7 +65,8 @@ class CEyeangle2PraPresenter implements IEyeangle2PraPresenter {
     public m_thSelRect:gdeint.CRect; // 缩略图选区。
     public m_curRank:number; // 上次输入的准确度评定。
 
-    private m_itm: ImgThumbModelAdapter; // 图片与缩略图转换器。传给 itm的宽度均为dispWidth。
+//    private m_itm: ImgThumbModelAdapter; // 图片与缩略图转换器。传给 itm的宽度均为dispWidth。
+    private m_itm: gdeint.ImgThumbModelV2; // 图片与缩略图转换器。传给 itm的宽度均为dispWidth。
 
     public bindPM(pm:CPraMachine_Eyeangle2):void {
         this.m_pm = pm;
@@ -75,7 +76,7 @@ class CEyeangle2PraPresenter implements IEyeangle2PraPresenter {
         this.m_pm = null;
     }
 
-    public setITM(itm:ImgThumbModelAdapter) {
+    public setITM(itm:gdeint.ImgThumbModelV2) {
         this.m_itm = itm;
     }
 

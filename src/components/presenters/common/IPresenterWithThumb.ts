@@ -4,7 +4,7 @@
  *
  */
 interface IPresenterWithThumb {
-    setITM(itm:ImgThumbModelAdapter):void;
+    setITM(itm:gdeint.ImgThumbModelV2):void;
 
     inpImgSelPt(pt:gdeint.CPoint): void;
     inpThSelPt(thSelPt: gdeint.CPoint): void;
