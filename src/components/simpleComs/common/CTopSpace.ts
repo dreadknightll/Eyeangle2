@@ -6,6 +6,8 @@
  * 使用方法：设置width—>设置height—>setColor()—>draw() 。
  * 
  */
+
+//注：应对iOS刘海屏无需使用TopSpace。把data-scale-mode改为“showAll”即可。
 class CTopSpace extends egret.DisplayObjectContainer{
 	public constructor() {
     	super();
