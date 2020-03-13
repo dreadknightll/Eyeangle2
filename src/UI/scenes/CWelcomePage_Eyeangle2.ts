@@ -1,10 +1,10 @@
-class CWelcomePage_Eyeangle2 implements IPage {
+class CWelcomePage_Eyeangle2 implements gdeint.IPage {
 
-    private m_commonPage:CPage;
+    private m_commonPage:gdeint.CPage;
     public m_scene:eyeangle2.CWelcomeScene_Eyeangle2_V2;
 
     public constructor() {
-        this.m_commonPage = new CPage();
+        this.m_commonPage = new gdeint.CPage();
     }
 
 	public show():void {

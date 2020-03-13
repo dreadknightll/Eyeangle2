@@ -3,7 +3,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var CWelcomePage_Eyeangle2 = (function () {
     function CWelcomePage_Eyeangle2() {
-        this.m_commonPage = new CPage();
+        this.m_commonPage = new gdeint.CPage();
     }
     CWelcomePage_Eyeangle2.prototype.show = function () {
         this.m_commonPage.show();
@@ -28,5 +28,5 @@ var CWelcomePage_Eyeangle2 = (function () {
     };
     return CWelcomePage_Eyeangle2;
 }());
-__reflect(CWelcomePage_Eyeangle2.prototype, "CWelcomePage_Eyeangle2", ["IPage", "IHidable"]);
+__reflect(CWelcomePage_Eyeangle2.prototype, "CWelcomePage_Eyeangle2", ["gdeint.IPage", "gdeint.IHidable"]);
 //# sourceMappingURL=CWelcomePage_Eyeangle2.js.map

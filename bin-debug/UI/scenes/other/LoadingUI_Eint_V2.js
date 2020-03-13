@@ -16,6 +16,7 @@ r.prototype = e.prototype, t.prototype = new r();
 };
 var LoadingUI_Eint_V2 = (function (_super) {
     __extends(LoadingUI_Eint_V2, _super);
+    //此处不能使用eui。因为未对接childrenCreated。
     function LoadingUI_Eint_V2() {
         // 注意：new前要把全局变量g_winWidth和g_winHeight填写好，并且logo预加载完成。
         return _super.call(this) || this;

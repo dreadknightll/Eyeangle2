@@ -30,7 +30,7 @@ var CPage2EyeanglePraContainerAdapter = (function (_super) {
         this.m_adaptee.hide();
     };
     return CPage2EyeanglePraContainerAdapter;
-}(CPage));
+}(gdeint.CPage));
 __reflect(CPage2EyeanglePraContainerAdapter.prototype, "CPage2EyeanglePraContainerAdapter");
 ;
 //# sourceMappingURL=CPage2EyeanglePraContainerAdapter.js.map

@@ -6,6 +6,7 @@
 ************************************************************/
 
 class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
+    //此处不能使用eui。因为未对接childrenCreated。
 
     public constructor() { 
     // 注意：new前要把全局变量g_winWidth和g_winHeight填写好，并且logo预加载完成。

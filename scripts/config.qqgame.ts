@@ -3,27 +3,27 @@
 
 import * as path from 'path';
 import { UglifyPlugin, CompilePlugin, ManifestPlugin, ExmlPlugin, EmitResConfigFilePlugin, TextureMergerPlugin, CleanPlugin } from 'built-in';
-import { WxgamePlugin } from './wxgame/wxgame';
+import { QQgamePlugin } from './qqgame/qqgame';
 import { CustomPlugin } from './myplugin';
 import * as defaultConfig from './config';
-
-//是否使用微信分离插件
-const useWxPlugin: boolean = false;
+//是否使用QQ小游戏引擎插件
+const useQQPlugin: boolean = false;
+let pluginList: string[] = []
 const config: ResourceManagerConfig = {
 
     buildConfig: (params) => {
 
         const { target, command, projectName, version } = params;
-        const outputDir = `../${projectName}_wxgame`;
+        const outputDir = `../${projectName}_qqgame`;
         if (command == 'build') {
             return {
                 outputDir,
                 commands: [
-                    new CleanPlugin({ matchers: ["js", "resource", "egret-library"] }),
+                    new CleanPlugin({ matchers: ["js", "resource"] }),
                     new CompilePlugin({ libraryType: "debug", defines: { DEBUG: true, RELEASE: false } }),
                     new ExmlPlugin('commonjs'), // 非 EUI 项目关闭此设置
-                    new WxgamePlugin(useWxPlugin),
-                    new ManifestPlugin({ output: 'manifest.js' })
+                    new QQgamePlugin(useQQPlugin, pluginList),
+                    new ManifestPlugin({ output: 'manifest.js', qqPlugin: { use: useQQPlugin, pluginList: pluginList } })
                 ]
             }
         }
@@ -31,10 +31,10 @@ const config: ResourceManagerConfig = {
             return {
                 outputDir,
                 commands: [
-                    new CleanPlugin({ matchers: ["js", "resource", "egret-library"] }),
+                    new CleanPlugin({ matchers: ["js", "resource"] }),
                     new CompilePlugin({ libraryType: "release", defines: { DEBUG: false, RELEASE: true } }),
                     new ExmlPlugin('commonjs'), // 非 EUI 项目关闭此设置
-                    new WxgamePlugin(useWxPlugin),
+                    new QQgamePlugin(useQQPlugin, pluginList),
                     new UglifyPlugin([
                         // 使用 EUI 项目，要压缩皮肤文件，可以开启这个压缩配置
                         // {
@@ -46,7 +46,7 @@ const config: ResourceManagerConfig = {
                             target: "main.min.js"
                         }
                     ]),
-                    new ManifestPlugin({ output: 'manifest.js', useWxPlugin: useWxPlugin })
+                    new ManifestPlugin({ output: 'manifest.js', qqPlugin: { use: useQQPlugin, pluginList: pluginList } })
                 ]
             }
         }

@@ -28,9 +28,9 @@ var g_welcomePage:CWelcomePage_Eyeangle2;
 
 var g_praScene: eyeangle2.CEyeanglePraScene; //练习画面。
 var g_praContainer: CEyeanglePraContainer;
-var g_pageJumper:CPageJumper;
+var g_pageJumper:gdeint.CPageJumper;
 
-var g_console: egret.TextField; //调试终端。
+var g_console: egret.TextField = new egret.TextField(); //调试终端。
 
 var g_winWidth: number; // 场景宽度。屏幕准备好以后迅速填入。
 var g_winHeight: number;
@@ -45,8 +45,45 @@ var g_notiLayerContainer: egret.DisplayObjectContainer; //只为调整层次。�
 
 class Main extends eui.UILayer {
 
+    public constructor () {
+    //程序开始运行时会自动执行此构造函数。
+    //但由于此时页面元素尚未准备好，页面元素相关的操作须转到createChildren里进行。
+
+        super();
+    // 初始化一些全局变量：
+        g_scenePos = new gdeint.CPoint();
+
+        g_console.size = 24;
+        g_console.x = 80;
+        g_console.y = 60;
+        g_console.width = 600;
+        g_console.height = 800;
+        g_console.textColor = 0xFF0000;
+
+        g_pageJumper = new gdeint.CPageJumper();
+    }
+
     protected createChildren(): void {
         super.createChildren();
+
+        //获取舞台宽度和高度：
+        g_winWidth = this.stage.stageWidth;
+        g_winHeight = this.stage.stageHeight;
+
+        //计算适配屏幕应采用的图形缩放比例和起始显示坐标。新版白鹭引擎下可考虑去掉：
+        var scaleX = g_winWidth / 480;
+        var scaleY = g_winHeight / 800;
+
+        if(scaleX < scaleY) {
+            g_scale = scaleX;
+            g_scenePos.m_x = 0;
+            g_scenePos.m_y = (g_winHeight - 800*g_scale)/2;
+        }
+        else {
+            g_scale = scaleY;
+            g_scenePos.m_x = (g_winWidth - 480*g_scale)/2;
+            g_scenePos.m_y = 0;
+        }
 
         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin
@@ -107,23 +144,6 @@ class Main extends eui.UILayer {
             await RES.loadConfig("resource/default.res.json", "resource/");
             await this.loadTheme();
             await RES.loadGroup("logo");
-
-            g_winWidth = this.stage.stageWidth;
-            g_winHeight = this.stage.stageHeight;
-
-            var scaleX = g_winWidth / 480;
-            var scaleY = g_winHeight / 800;
-
-            if(scaleX < scaleY) {
-                g_scale = scaleX;
-                g_scenePos.m_x = 0;
-                g_scenePos.m_y = (g_winHeight - 800*g_scale)/2;
-            }
-            else {
-                g_scale = scaleY;
-                g_scenePos.m_x = (g_winWidth - 480*g_scale)/2;
-                g_scenePos.m_y = 0;
-            }
 
             g_loadingView.setWinSize(g_winWidth,g_winHeight);
             g_loadingView.height = g_winHeight; // No overlap with the prior line!
@@ -211,7 +231,6 @@ class Main extends eui.UILayer {
         g_sceneLayer.addChild(preloaderUI);
         g_praContainer.setPreloaderUI(preloaderUI);
 
-        g_pageJumper = new CPageJumper();
         var praContainerAdapter:CPage2EyeanglePraContainerAdapter = new CPage2EyeanglePraContainerAdapter();
         praContainerAdapter.m_adaptee = g_praContainer;
         g_pageJumper.setPage("WelcomeScene" , g_welcomePage);

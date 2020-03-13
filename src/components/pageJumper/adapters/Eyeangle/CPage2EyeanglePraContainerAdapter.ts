@@ -5,7 +5,7 @@
     4.showPage/hidePage.
 */
 
-class CPage2EyeanglePraContainerAdapter extends CPage {
+class CPage2EyeanglePraContainerAdapter extends gdeint.CPage {
     public m_adaptee:IEyeanglePraContainer;
 
     public constructor() {

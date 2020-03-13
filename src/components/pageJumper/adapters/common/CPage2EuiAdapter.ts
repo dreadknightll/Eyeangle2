@@ -5,7 +5,7 @@
     4.showPage/hidePage.
 */
 
-class CPage2EuiAdapter extends CPage {
+class CPage2EuiAdapter extends gdeint.CPage {
     public m_adaptee:eui.Component;
 
     public constructor() {
