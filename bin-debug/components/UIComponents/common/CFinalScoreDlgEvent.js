@@ -24,4 +24,3 @@ var CFinalScoreDlgEvent = (function (_super) {
     return CFinalScoreDlgEvent;
 }(egret.Event));
 __reflect(CFinalScoreDlgEvent.prototype, "CFinalScoreDlgEvent");
-//# sourceMappingURL=CFinalScoreDlgEvent.js.map

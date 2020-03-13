@@ -567,4 +567,3 @@ var eyeangle2;
     __reflect(CEyeanglePraScene.prototype, "eyeangle2.CEyeanglePraScene", ["IEyeanglePraScene", "IScene", "IHidable", "INotiParent", "IContainerPlugin"]);
     ;
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CEyeanglePraScene.js.map

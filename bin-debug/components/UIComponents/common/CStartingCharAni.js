@@ -67,4 +67,3 @@ var eyeangle2;
     eyeangle2.CStartingCharAni = CStartingCharAni;
     __reflect(CStartingCharAni.prototype, "eyeangle2.CStartingCharAni");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CStartingCharAni.js.map

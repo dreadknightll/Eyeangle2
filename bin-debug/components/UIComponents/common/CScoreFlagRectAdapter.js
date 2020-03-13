@@ -29,4 +29,3 @@ var CScoreFlagRectAdapter = (function () {
     return CScoreFlagRectAdapter;
 }());
 __reflect(CScoreFlagRectAdapter.prototype, "CScoreFlagRectAdapter", ["IScoreFlagRect"]);
-//# sourceMappingURL=CScoreFlagRectAdapter.js.map

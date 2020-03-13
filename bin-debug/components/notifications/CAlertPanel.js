@@ -83,4 +83,3 @@ var eyeangle2;
     eyeangle2.CAlertPanel = CAlertPanel;
     __reflect(CAlertPanel.prototype, "eyeangle2.CAlertPanel", ["IAlertDlg", "INotification", "IContainerPlugin", "IHidable"]);
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CAlertPanel.js.map

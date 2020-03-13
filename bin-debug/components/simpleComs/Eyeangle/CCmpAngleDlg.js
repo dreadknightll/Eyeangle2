@@ -56,4 +56,3 @@ var eyeangle2;
     eyeangle2.CCmpAngleDlg = CCmpAngleDlg;
     __reflect(CCmpAngleDlg.prototype, "eyeangle2.CCmpAngleDlg");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CCmpAngleDlg.js.map

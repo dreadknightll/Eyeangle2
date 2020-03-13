@@ -74,4 +74,3 @@ var CEyeangle2ResNameFinder = (function () {
     return CEyeangle2ResNameFinder;
 }());
 __reflect(CEyeangle2ResNameFinder.prototype, "CEyeangle2ResNameFinder", ["IEyeangle2ResNameFinder", "IFinder"]);
-//# sourceMappingURL=CEyeangle2ResNameFinder.js.map

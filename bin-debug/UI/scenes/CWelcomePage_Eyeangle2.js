@@ -29,4 +29,3 @@ var CWelcomePage_Eyeangle2 = (function () {
     return CWelcomePage_Eyeangle2;
 }());
 __reflect(CWelcomePage_Eyeangle2.prototype, "CWelcomePage_Eyeangle2", ["gdeint.IPage", "gdeint.IHidable"]);
-//# sourceMappingURL=CWelcomePage_Eyeangle2.js.map

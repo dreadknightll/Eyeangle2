@@ -244,4 +244,3 @@ var eyeangle2;
     eyeangle2.CAngleInputter = CAngleInputter;
     __reflect(CAngleInputter.prototype, "eyeangle2.CAngleInputter");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CAngleInputter.js.map

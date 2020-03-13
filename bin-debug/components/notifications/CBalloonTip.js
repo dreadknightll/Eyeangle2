@@ -47,4 +47,3 @@ var eyeangle2;
     eyeangle2.CBalloonTip = CBalloonTip;
     __reflect(CBalloonTip.prototype, "eyeangle2.CBalloonTip");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CBalloonTip.js.map

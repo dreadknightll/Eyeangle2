@@ -61,4 +61,3 @@ var eyeangle2;
     eyeangle2.CHorverCheckPanel = CHorverCheckPanel;
     __reflect(CHorverCheckPanel.prototype, "eyeangle2.CHorverCheckPanel");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CHorverCheckPanel.js.map

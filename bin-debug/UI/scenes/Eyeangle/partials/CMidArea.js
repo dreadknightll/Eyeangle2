@@ -125,4 +125,3 @@ var eyeangle2;
     eyeangle2.CMidArea = CMidArea;
     __reflect(CMidArea.prototype, "eyeangle2.CMidArea");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CMidArea.js.map

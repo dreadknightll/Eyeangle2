@@ -1,1 +1,0 @@
-//# sourceMappingURL=IScoreFlagRect.js.map

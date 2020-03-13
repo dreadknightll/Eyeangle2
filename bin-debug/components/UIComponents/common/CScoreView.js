@@ -100,4 +100,3 @@ var eyeangle2;
     eyeangle2.CScoreView = CScoreView;
     __reflect(CScoreView.prototype, "eyeangle2.CScoreView");
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CScoreView.js.map

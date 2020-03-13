@@ -109,4 +109,3 @@ var eyeangle2;
     eyeangle2.CConfirmPanel = CConfirmPanel;
     __reflect(CConfirmPanel.prototype, "eyeangle2.CConfirmPanel", ["IConfirmDlg", "INotification", "IContainerPlugin", "IHidable"]);
 })(eyeangle2 || (eyeangle2 = {}));
-//# sourceMappingURL=CConfirmPanel.js.map
