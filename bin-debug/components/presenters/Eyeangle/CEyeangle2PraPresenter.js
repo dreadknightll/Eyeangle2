@@ -465,3 +465,4 @@ var CEyeangle2PraPresenter = (function () {
     return CEyeangle2PraPresenter;
 }());
 __reflect(CEyeangle2PraPresenter.prototype, "CEyeangle2PraPresenter", ["IEyeangle2PraPresenter", "IPraPresenter", "IBindableWithPM", "IPresenterWithThumb", "IPresenterWithCa"]);
+//# sourceMappingURL=CEyeangle2PraPresenter.js.map

@@ -58,3 +58,4 @@ var eyeangle2;
     eyeangle2.CProgressView = CProgressView;
     __reflect(CProgressView.prototype, "eyeangle2.CProgressView");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CProgressView.js.map

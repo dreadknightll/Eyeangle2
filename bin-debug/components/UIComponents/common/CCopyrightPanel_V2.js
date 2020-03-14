@@ -69,3 +69,4 @@ var eyeangle2;
     eyeangle2.CCopyrightPanel_V2 = CCopyrightPanel_V2;
     __reflect(CCopyrightPanel_V2.prototype, "eyeangle2.CCopyrightPanel_V2");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CCopyrightPanel_V2.js.map

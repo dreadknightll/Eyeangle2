@@ -71,3 +71,4 @@ var eyeangle2;
     eyeangle2.CHelpPanel = CHelpPanel;
     __reflect(CHelpPanel.prototype, "eyeangle2.CHelpPanel");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CHelpPanel.js.map

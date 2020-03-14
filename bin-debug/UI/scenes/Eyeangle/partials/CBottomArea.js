@@ -33,3 +33,4 @@ var eyeangle2;
     eyeangle2.CBottomArea = CBottomArea;
     __reflect(CBottomArea.prototype, "eyeangle2.CBottomArea");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CBottomArea.js.map

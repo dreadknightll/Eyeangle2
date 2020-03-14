@@ -81,3 +81,4 @@ var CAngleChecker = (function () {
 }());
 __reflect(CAngleChecker.prototype, "CAngleChecker");
 ;
+//# sourceMappingURL=CAngleChecker.js.map

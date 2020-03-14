@@ -26,3 +26,4 @@ var CAngle = (function (_super) {
 }(gdeint.CPraElemBase));
 __reflect(CAngle.prototype, "CAngle");
 ;
+//# sourceMappingURL=CAngle.js.map

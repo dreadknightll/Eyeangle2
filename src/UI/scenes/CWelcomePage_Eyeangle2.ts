@@ -1,3 +1,5 @@
+
+//此类用于实现切换页面时启用/禁止开始练习按钮等操作。
 class CWelcomePage_Eyeangle2 implements gdeint.IPage {
 
     private m_commonPage:gdeint.CPage;

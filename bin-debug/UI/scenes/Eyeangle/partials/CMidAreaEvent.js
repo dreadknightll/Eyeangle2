@@ -25,3 +25,4 @@ var CMidAreaEvent = (function (_super) {
     return CMidAreaEvent;
 }(egret.Event));
 __reflect(CMidAreaEvent.prototype, "CMidAreaEvent");
+//# sourceMappingURL=CMidAreaEvent.js.map

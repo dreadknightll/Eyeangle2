@@ -140,3 +140,4 @@ var eyeangle2;
     eyeangle2.CWelcomeScene_Eyeangle2_V2 = CWelcomeScene_Eyeangle2_V2;
     __reflect(CWelcomeScene_Eyeangle2_V2.prototype, "eyeangle2.CWelcomeScene_Eyeangle2_V2");
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CWelcomeScene_Eyeangle2_V2.js.map

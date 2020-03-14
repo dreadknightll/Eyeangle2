@@ -102,3 +102,4 @@ var eyeangle2;
     eyeangle2.CPreloaderUI = CPreloaderUI;
     __reflect(CPreloaderUI.prototype, "eyeangle2.CPreloaderUI", ["IPreloaderUI", "IContainerPlugin", "IHidable"]);
 })(eyeangle2 || (eyeangle2 = {}));
+//# sourceMappingURL=CPreloaderUI.js.map

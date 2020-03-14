@@ -115,3 +115,4 @@ function calEdge2Point(vertex, edge1_angle, va_len, angleValue) {
     ret.m_y = tmp_xy + vertex.m_y;
     return ret;
 }
+//# sourceMappingURL=funcs_eyeangle.js.map
