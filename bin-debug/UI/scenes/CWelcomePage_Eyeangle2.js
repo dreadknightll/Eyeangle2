@@ -1,6 +1,7 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
+//此类用于实现切换页面时启用/禁止开始练习按钮等操作。
 var CWelcomePage_Eyeangle2 = (function () {
     function CWelcomePage_Eyeangle2() {
         this.m_commonPage = new gdeint.CPage();

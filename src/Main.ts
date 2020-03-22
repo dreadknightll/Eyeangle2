@@ -37,7 +37,7 @@ var g_winHeight: number;
 var g_scale:number = 1; // 缩放比例。随着屏幕分辨率的增大而增大。横竖使用同一缩放比例来保持宽高比。
 var g_scenePos:gdeint.CPoint; // 场景的坐标。注：不要在这里new，否则加密打包apk后会无法运行。
 
-var g_loadingView: LoadingUI_Eint_V2; // 程序启动时的资源加载画面。
+var g_loadingView: LoadingUI_Eint_V3; // 程序启动时的资源加载画面。
 
 var g_sceneLayer: eui.Group; // 只为调整显示层次。无需理会。
 var g_dlgLayerContainer: egret.DisplayObjectContainer; // 只为调整显示层次。无需理会。
@@ -139,7 +139,7 @@ class Main extends eui.UILayer {
 
     private async loadResource() {
         try {
-            g_loadingView = new LoadingUI_Eint_V2();
+            g_loadingView = new LoadingUI_Eint_V3();
             this.stage.addChild(g_loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");
             await this.loadTheme();
@@ -157,6 +157,7 @@ class Main extends eui.UILayer {
             await RES.loadGroup("preload", 0, g_loadingView);
             await RES.loadGroup("eint", 0, g_loadingView);
             await RES.loadGroup("eyeangle", 0, g_loadingView);
+            await g_loadingView.touch2C();
             this.stage.removeChild(g_loadingView);
         }
         catch (e) {

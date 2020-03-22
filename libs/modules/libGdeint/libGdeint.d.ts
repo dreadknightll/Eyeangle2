@@ -9,10 +9,43 @@ declare namespace gdeint {
     }
 }
 declare namespace gdeint {
-    interface IHidable {
-        show(): void;
-        hide(): void;
-        isVisible(): boolean;
+    class CSquareCircler {
+        private m_circlerRect;
+        private m_inpItemRect;
+        private m_pullGapHor;
+        private m_pullGapVer;
+        private m_pushGapHor;
+        private m_pushGapVer;
+        setCirclerRect(r: CRect): void;
+        setItemRect(r: CRect): void;
+        setPullGapHor(gap: number): void;
+        setPullGapVer(gap: number): void;
+        setPushGapHor(gap: number): void;
+        setPushGapVer(gap: number): void;
+        setInpPos(inpPos: CPoint): void;
+        getOutpPos(): CPoint;
+    }
+}
+declare namespace gdeint {
+    class ImgThumbModelV2 {
+        private m_thMaxWidth;
+        private m_thMaxHeight;
+        private m_imgWidth;
+        private m_imgHeight;
+        private m_imgSelRect;
+        constructor();
+        getRat(): number;
+        setThMaxWidth(thMaxWidth: any): void;
+        setThMaxHeight(thMaxHeight: any): void;
+        getThWidth(): number;
+        getThHeight(): number;
+        getThSelRect(): gdeint.CRect;
+        setImgWidth(imgWidth: any): void;
+        setImgHeight(imgHeight: any): void;
+        getImgSelRect(): gdeint.CRect;
+        setImgSelRect(imgSelRect: any): void;
+        ip2Tp(ip: any): gdeint.CPoint;
+        tp2Ip(tp: any): gdeint.CPoint;
     }
 }
 declare namespace gdeint {
@@ -70,25 +103,10 @@ declare namespace gdeint {
     }
 }
 declare namespace gdeint {
-    class ImgThumbModelV2 {
-        private m_thMaxWidth;
-        private m_thMaxHeight;
-        private m_imgWidth;
-        private m_imgHeight;
-        private m_imgSelRect;
-        constructor();
-        getRat(): number;
-        setThMaxWidth(thMaxWidth: any): void;
-        setThMaxHeight(thMaxHeight: any): void;
-        getThWidth(): number;
-        getThHeight(): number;
-        getThSelRect(): gdeint.CRect;
-        setImgWidth(imgWidth: any): void;
-        setImgHeight(imgHeight: any): void;
-        getImgSelRect(): gdeint.CRect;
-        setImgSelRect(imgSelRect: any): void;
-        ip2Tp(ip: any): gdeint.CPoint;
-        tp2Ip(tp: any): gdeint.CPoint;
+    interface IHidable {
+        show(): void;
+        hide(): void;
+        isVisible(): boolean;
     }
 }
 declare namespace gdeint {
@@ -129,6 +147,7 @@ declare namespace gdeint {
     function randomNums(maxNum: any, cnt: any): any;
     function randomNums_ts(maxNum: number, cnt: number): Array<number>;
     function tailContain(str1: any, str2: any): boolean;
+    function seconds2MinSec(seconds: number): string;
     function objectSize(the_object: any): number;
     function objectValues(the_object: any): string;
 }
@@ -141,7 +160,7 @@ declare namespace gdeint {
     class CPoint {
         m_x: number;
         m_y: number;
-        constructor();
+        toNumArr(): Array<number>;
     }
 }
 /**

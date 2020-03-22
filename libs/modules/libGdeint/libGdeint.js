@@ -1,102 +1,108 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
+// TypeScript file
+/*
+    控制物体移动范围可借助Circler。
+*/
 var gdeint;
 (function (gdeint) {
-    var CPage = (function () {
-        function CPage() {
+    var CSquareCircler = (function () {
+        function CSquareCircler() {
+            this.m_pullGapHor = 0;
+            this.m_pullGapVer = 0;
+            this.m_pushGapHor = 0;
+            this.m_pushGapVer = 0;
         }
-        CPage.prototype.showOnFront = function () {
-            this.onShownOnFront();
+        CSquareCircler.prototype.setCirclerRect = function (r) {
+            this.m_circlerRect = r;
         };
-        CPage.prototype.show = function () {
+        CSquareCircler.prototype.setItemRect = function (r) {
+            this.m_inpItemRect = r;
         };
-        CPage.prototype.hide = function () {
+        CSquareCircler.prototype.setPullGapHor = function (gap) {
+            this.m_pullGapHor = gap;
         };
-        CPage.prototype.onShownOnFront = function () {
-            //		window.alert("super.onPageShow");
+        CSquareCircler.prototype.setPullGapVer = function (gap) {
+            this.m_pullGapVer = gap;
         };
-        CPage.prototype.isVisible = function () {
-            return true;
+        CSquareCircler.prototype.setPushGapHor = function (gap) {
+            this.m_pushGapHor = gap;
         };
-        return CPage;
-    }());
-    gdeint.CPage = CPage;
-    __reflect(CPage.prototype, "gdeint.CPage", ["gdeint.IPage", "gdeint.IHidable"]);
-})(gdeint || (gdeint = {}));
-var gdeint;
-(function (gdeint) {
-    var CPageJumper = (function () {
-        //不调用gotoPage，则页面显示状态维持原状。
-        function CPageJumper() {
-            this.m_pages = {};
-            this.m_curState = 0;
-        }
-        CPageJumper.prototype.setPage = function (pageName, page) {
-            this.m_pages[pageName] = page;
+        CSquareCircler.prototype.setPushGapVer = function (gap) {
+            this.m_pushGapVer = gap;
         };
-        CPageJumper.prototype.getPage = function (pageName) {
-            return this.m_pages[pageName];
+        CSquareCircler.prototype.setInpPos = function (inpPos) {
+            this.m_inpItemRect.m_left = inpPos.m_x;
+            this.m_inpItemRect.m_top = inpPos.m_y;
         };
-        CPageJumper.prototype.isPageReady = function (pageName) {
-            return false;
-        };
-        CPageJumper.prototype.gotoPage = function (pageName, readyListener /*Not used*/) {
-            this.m_targetPage = pageName;
-            var curPage;
-            curPage = this.m_pages[pageName];
-            //		if(curPage.isReady()) {
-            curPage.showOnFront();
-            //	Hide other pages:
-            for (var tmpKey in this.m_pages) {
-                if (tmpKey != pageName) {
-                    if (undefined != this.m_pages[tmpKey]) {
-                        this.m_pages[tmpKey].hide();
-                    }
+        CSquareCircler.prototype.getOutpPos = function () {
+            var ret = new gdeint.CPoint();
+            ret.m_x = 0;
+            ret.m_y = 0;
+            if (this.m_inpItemRect.m_width < this.m_circlerRect.m_width) {
+                var leftLimit, rightLimit;
+                leftLimit = this.m_circlerRect.m_left - this.m_pushGapHor;
+                rightLimit = this.m_circlerRect.m_left + this.m_circlerRect.m_width + this.m_pushGapHor;
+                if (this.m_inpItemRect.m_left < leftLimit) {
+                    ret.m_x = leftLimit;
+                }
+                else if (this.m_inpItemRect.m_left + this.m_inpItemRect.m_width > rightLimit) {
+                    ret.m_x = rightLimit - this.m_inpItemRect.m_width;
+                }
+                else {
+                    ret.m_x = this.m_inpItemRect.m_left;
+                    ret.m_y = this.m_inpItemRect.m_top;
                 }
             }
-            //		}
-            //		else {
-            //			add to action queue.
-            //		}
-        };
-        /*	pubilc onPageLoadReady(pageName:string):void {
-                pageName
-            }*/
-        CPageJumper.prototype.getState = function () {
-            //1、Idle state 2、Jumping state(Target set and waiting to jump)
-            return this.m_curState;
-        };
-        return CPageJumper;
-    }());
-    gdeint.CPageJumper = CPageJumper;
-    __reflect(CPageJumper.prototype, "gdeint.CPageJumper", ["gdeint.IPageJumper"]);
-})(gdeint || (gdeint = {}));
-var gdeint;
-(function (gdeint) {
-    /**
-     *  /src/components/EintParsers.ts
-     * 聚集了自己写的解析器。
-     */
-    var EintParsers;
-    (function (EintParsers) {
-        var CaRatParser = (function () {
-            function CaRatParser() {
-            }
-            CaRatParser.parseFloat = function (str) {
-                //  Least result: 0.001
-                var ret;
-                ret = parseFloat(str);
-                if (isNaN(ret) || ret < 0.001) {
-                    ret = 0.001;
+            else {
+                var leftLimit, rightLimit;
+                leftLimit = this.m_circlerRect.m_left + this.m_circlerRect.m_width - this.m_pullGapHor - this.m_inpItemRect.m_width;
+                rightLimit = this.m_circlerRect.m_left + this.m_pullGapHor;
+                if (this.m_inpItemRect.m_left < leftLimit) {
+                    ret.m_x = leftLimit;
                 }
-                return ret;
-            };
-            return CaRatParser;
-        }());
-        EintParsers.CaRatParser = CaRatParser;
-        __reflect(CaRatParser.prototype, "gdeint.EintParsers.CaRatParser");
-    })(EintParsers = gdeint.EintParsers || (gdeint.EintParsers = {}));
+                else if (this.m_inpItemRect.m_left > rightLimit) {
+                    ret.m_x = rightLimit;
+                }
+                else {
+                    ret.m_x = this.m_inpItemRect.m_left;
+                }
+            }
+            if (this.m_inpItemRect.m_height > this.m_circlerRect.m_height) {
+                var upLimit, downLimit;
+                upLimit = this.m_circlerRect.m_top + this.m_circlerRect.m_height - this.m_pullGapVer - this.m_inpItemRect.m_height;
+                downLimit = this.m_circlerRect.m_top + this.m_pullGapVer;
+                if (this.m_inpItemRect.m_top < upLimit) {
+                    ret.m_y = upLimit;
+                }
+                else if (this.m_inpItemRect.m_top > downLimit) {
+                    ret.m_y = downLimit;
+                }
+                else {
+                    ret.m_y = this.m_inpItemRect.m_top;
+                }
+            }
+            else {
+                var topLimit, bottomLimit;
+                topLimit = this.m_circlerRect.m_top - this.m_pushGapVer;
+                bottomLimit = this.m_circlerRect.m_top + this.m_circlerRect.m_height + this.m_pushGapVer;
+                if (this.m_inpItemRect.m_top < topLimit) {
+                    ret.m_y = topLimit;
+                }
+                else if (this.m_inpItemRect.m_top + this.m_inpItemRect.m_height > bottomLimit) {
+                    ret.m_y = bottomLimit - this.m_inpItemRect.m_height;
+                }
+                else {
+                    ret.m_y = this.m_inpItemRect.m_top;
+                }
+            }
+            return ret;
+        };
+        return CSquareCircler;
+    }());
+    gdeint.CSquareCircler = CSquareCircler;
+    __reflect(CSquareCircler.prototype, "gdeint.CSquareCircler");
 })(gdeint || (gdeint = {}));
 /*
  *  /src/classes/imgThumbModel/ImgThumbModelV2.ts
@@ -206,6 +212,103 @@ var gdeint;
     }());
     gdeint.ImgThumbModelV2 = ImgThumbModelV2;
     __reflect(ImgThumbModelV2.prototype, "gdeint.ImgThumbModelV2");
+})(gdeint || (gdeint = {}));
+var gdeint;
+(function (gdeint) {
+    var CPage = (function () {
+        function CPage() {
+        }
+        CPage.prototype.showOnFront = function () {
+            this.onShownOnFront();
+        };
+        CPage.prototype.show = function () {
+        };
+        CPage.prototype.hide = function () {
+        };
+        CPage.prototype.onShownOnFront = function () {
+            //		window.alert("super.onPageShow");
+        };
+        CPage.prototype.isVisible = function () {
+            return true;
+        };
+        return CPage;
+    }());
+    gdeint.CPage = CPage;
+    __reflect(CPage.prototype, "gdeint.CPage", ["gdeint.IPage", "gdeint.IHidable"]);
+})(gdeint || (gdeint = {}));
+var gdeint;
+(function (gdeint) {
+    var CPageJumper = (function () {
+        //不调用gotoPage，则页面显示状态维持原状。
+        function CPageJumper() {
+            this.m_pages = {};
+            this.m_curState = 0;
+        }
+        CPageJumper.prototype.setPage = function (pageName, page) {
+            this.m_pages[pageName] = page;
+        };
+        CPageJumper.prototype.getPage = function (pageName) {
+            return this.m_pages[pageName];
+        };
+        CPageJumper.prototype.isPageReady = function (pageName) {
+            return false;
+        };
+        CPageJumper.prototype.gotoPage = function (pageName, readyListener /*Not used*/) {
+            this.m_targetPage = pageName;
+            var curPage;
+            curPage = this.m_pages[pageName];
+            //		if(curPage.isReady()) {
+            curPage.showOnFront();
+            //	Hide other pages:
+            for (var tmpKey in this.m_pages) {
+                if (tmpKey != pageName) {
+                    if (undefined != this.m_pages[tmpKey]) {
+                        this.m_pages[tmpKey].hide();
+                    }
+                }
+            }
+            //		}
+            //		else {
+            //			add to action queue.
+            //		}
+        };
+        /*	pubilc onPageLoadReady(pageName:string):void {
+                pageName
+            }*/
+        CPageJumper.prototype.getState = function () {
+            //1、Idle state 2、Jumping state(Target set and waiting to jump)
+            return this.m_curState;
+        };
+        return CPageJumper;
+    }());
+    gdeint.CPageJumper = CPageJumper;
+    __reflect(CPageJumper.prototype, "gdeint.CPageJumper", ["gdeint.IPageJumper"]);
+})(gdeint || (gdeint = {}));
+var gdeint;
+(function (gdeint) {
+    /**
+     *  /src/components/EintParsers.ts
+     * 聚集了自己写的解析器。
+     */
+    var EintParsers;
+    (function (EintParsers) {
+        var CaRatParser = (function () {
+            function CaRatParser() {
+            }
+            CaRatParser.parseFloat = function (str) {
+                //  Least result: 0.001
+                var ret;
+                ret = parseFloat(str);
+                if (isNaN(ret) || ret < 0.001) {
+                    ret = 0.001;
+                }
+                return ret;
+            };
+            return CaRatParser;
+        }());
+        EintParsers.CaRatParser = CaRatParser;
+        __reflect(CaRatParser.prototype, "gdeint.EintParsers.CaRatParser");
+    })(EintParsers = gdeint.EintParsers || (gdeint.EintParsers = {}));
 })(gdeint || (gdeint = {}));
 var gdeint;
 (function (gdeint) {
@@ -332,6 +435,29 @@ var gdeint;
         return false;
     }
     gdeint.tailContain = tailContain;
+    function seconds2MinSec(seconds) {
+        var ret;
+        ret = "00:00";
+        var minPart, secPart;
+        secPart = seconds % 60;
+        minPart = Math.floor(seconds / 60);
+        var strMinPart, strSecPart;
+        if (minPart < 10) {
+            strMinPart = "0" + minPart;
+        }
+        else {
+            strMinPart = "" + minPart;
+        }
+        if (secPart < 10) {
+            strSecPart = "0" + secPart;
+        }
+        else {
+            strSecPart = "" + secPart;
+        }
+        ret = strMinPart + ":" + strSecPart;
+        return ret;
+    }
+    gdeint.seconds2MinSec = seconds2MinSec;
     // 对Date的扩展，将 Date 转化为指定格式的String   
     // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，   
     // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)   
@@ -394,6 +520,15 @@ var gdeint;
     var CPoint = (function () {
         function CPoint() {
         }
+        /*        public static fromArr(arr:Array<number>):CPoint {
+                    var ret;
+                    ret.m_x = arr[0];
+                    ret.m_y = arr[1];
+                    return ret;
+                }*/
+        CPoint.prototype.toNumArr = function () {
+            return [this.m_x, this.m_y];
+        };
         return CPoint;
     }());
     gdeint.CPoint = CPoint;

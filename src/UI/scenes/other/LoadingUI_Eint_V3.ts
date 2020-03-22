@@ -5,7 +5,7 @@
 *
 ************************************************************/
 
-class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
+class LoadingUI_Eint_V3 extends egret.Sprite implements RES.PromiseTaskReporter{
     //此处不能使用eui。因为未对接childrenCreated。
 
     public constructor() { 
@@ -24,7 +24,6 @@ class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
     private m_progress: egret.TextField;
     private m_p2c: egret.TextField;
 
-    private m_tchTimer: egret.Timer;
     private m_flashTimer: egret.Timer;
     private m_flashCnt: number;
 
@@ -32,8 +31,6 @@ class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
         this.width = this.m_winWidth;
         this.height = this.m_winHeight;
         this.createView();
-        this.m_tchTimer = new egret.Timer(1000,1);
-        this.m_tchTimer.addEventListener(egret.TimerEvent.TIMER,this.onTchTimer,this);
 
         this.m_flashCnt = 0;
         this.m_flashTimer = new egret.Timer(300,0);
@@ -114,9 +111,6 @@ class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
 
     private setProgress(current:number,total:number): void {
         this.m_progress.text = "准备中..." + (current / total * 100).toString().substr(0,4) + "%";
-        if(current == total) {
-            this.m_tchTimer.start();
-        }
     }
 
     public setWinSize(wid: number,hei: number) {
@@ -128,8 +122,19 @@ class LoadingUI_Eint_V2 extends egret.Sprite implements RES.PromiseTaskReporter{
         接口方法。在加载进度增加时自动触发。
     */
     public onProgress(current: number, total: number): void {
-//        this.textField.text = `Loading...${current}/${total}`;
         this.setProgress(current , total);
     }
 
+    public async touch2C():Promise<void> {
+        //进入“触摸屏幕继续”状态。由外部调用。
+        var retPromise = new Promise<void> ( resolve => {
+            this.m_p2c.visible = true;// "Touch to continue" flash
+            this.touchEnabled = true;
+            this.addEventListener(egret.TouchEvent.TOUCH_BEGIN,resv=>{ resolve() },this);
+
+            this.m_flashTimer.start();
+        });
+
+        return retPromise;
+    }
 }
