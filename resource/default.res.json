@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,buttonSnd_mp3,AngleInputterBg_png,AngleInputterToucher_png,AngleInputterToucher_futiled_png,arrow_png,closeBtn_png,copyright_png,eint_logo_png,eyeangle2_logo_png,noBtn_png,noBtnDown_png,noImg_gif,noticeBg_png,ok_button_png,ok_button_disabled_png,ok_button_down_png,progress_arrow_png,progress_cell_png,progress_cell_empty_png,progress_right_png,progress_right_old_png,questioner_png,refreshBtn_png,replay_button_png,replay_button_down_png,rippleCircle_png,rulerBodyCell_gif,rulerBodyCell2_gif,ruler_drager_png,ruler_head_png,scoreFrame_png,score_cross_png,score_dot_png,score_flag_png,square1_png,square2_png,square3_png,star_empty_png,star_full_png,thumb_sel_png,tipBalloon_png,top_screen_button_down_png,top_screen_button_up_png,top_screen_closed_png,top_screen_open_png,wait_gif,yesBtn_png,yesBtnDown_png,img_001_gif,img_002_gif,img_003_gif,img_004_gif,img_005_gif,img_006_gif,img_007_gif,img_008_gif,img_009_gif,img_010_gif,pic001_json,pic002_json,pic003_json,pic004_json,pic005_json,pic006_json,pic007_json,pic008_json,pic009_json,pic010_json,localVer_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,buttonSnd_mp3,AngleInputterBg_png,AngleInputterToucher_png,AngleInputterToucher_futiled_png,arrow_png,closeBtn_png,copyright_png,eint_logo_png,eyeangle2_logo_png,noBtn_png,noBtnDown_png,noImg_gif,noticeBg_png,ok_button_png,ok_button_disabled_png,ok_button_down_png,progress_arrow_png,progress_cell_png,progress_cell_empty_png,progress_right_png,progress_right_old_png,questioner_png,refreshBtn_png,replay_button_png,replay_button_down_png,rippleCircle_png,rulerBodyCell_gif,rulerBodyCell2_gif,ruler_drager_png,ruler_head_png,scoreFrame_png,score_cross_png,score_dot_png,score_flag_png,square1_png,square2_png,square3_png,star_empty_png,star_full_png,thumb_sel_png,tipBalloon_png,top_screen_button_down_png,top_screen_button_up_png,top_screen_closed_png,top_screen_open_png,wait_gif,yesBtn_png,yesBtnDown_png,img_001_gif,img_002_gif,img_003_gif,img_004_gif,img_005_gif,img_006_gif,img_007_gif,img_008_gif,img_009_gif,img_010_gif,pic001_json,pic002_json,pic003_json,pic004_json,pic005_json,pic006_json,pic007_json,pic008_json,pic009_json,pic010_json,localVer_json,clock_shutdown_png",
 			"name": "preload"
 		},
 		{
@@ -522,6 +522,11 @@
 			"name": "localVer_json",
 			"type": "json",
 			"url": "config/localVer.json"
+		},
+		{
+			"name": "clock_shutdown_png",
+			"type": "image",
+			"url": "imgs/clock_shutdown.png"
 		}
 	]
 }

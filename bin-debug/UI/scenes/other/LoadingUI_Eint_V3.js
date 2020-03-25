@@ -1,7 +1,7 @@
 /***********************************************************
-* /src/UI/scenes/other/loadingUI_Eint_V2.ts
+* /src/UI/scenes/other/loadingUI_Eint_V3.ts
 * 程序启动时的资源加载界面。
-* 使用方法：创建对象 —> setWinSize —> create 。
+* 使用方法：创建对象 —> setWinSize —> create 。需要“触摸屏幕继续”时，调用touch2C。
 *
 ************************************************************/
 var __reflect = (this && this.__reflect) || function (p, c, t) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="shutdownClock" width="360" height="300" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="100%" height="100%" x="180" y="190" anchorOffsetX="180" anchorOffsetY="190" source="clock_shutdown_png"/>
+	<e:Label id="timeLabel" text="00:00" left="5%" top="55%" width="90%" height="30%" textColor="0x000000" size="94" textAlign="center"/>
+
+    <e:Label id="labelDisplay" top="8" bottom="8" left="8" right="8"
+             size="20"
+             textColor="0xFFFFFF" verticalAlign="middle" textAlign="center"/>
+		
+</e:Skin>

@@ -38,7 +38,7 @@ namespace eyeangle2 {
         private m2_tmpS2StartBtn = true; //Switched to StartBtn.
 
         public m_latestVerLoader:egret.URLLoader;
-
+        private shutdownClock:gdeint.CShutDownClock;
 
         public switch2StartBtn():void {
             this.m2_tmpS2StartBtn = true;

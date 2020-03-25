@@ -80,6 +80,10 @@ declare class replayButtonSkin extends eui.Skin{
 }
 declare class scoreViewSkin extends eui.Skin{
 }
+declare class shutdownClock extends eui.Skin{
+}
+declare class shutdownScrSkin extends eui.Skin{
+}
 declare class startingCharAni extends eui.Skin{
 }
 declare class thumbUI extends eui.Skin{

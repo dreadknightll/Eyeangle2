@@ -65,9 +65,11 @@ var S_BUILD_FOR = S_NATIVE_IOS;
 var S_CHECK_UPDATE_ANDROID = false; // 是否检查更新。
 var g_welcomeScene; //欢迎画面。
 var g_welcomePage;
+var g_shutdownScr;
 var g_praScene; //练习画面。
 var g_praContainer;
 var g_pageJumper;
+var g_shutdownTimer; // 为了眼睛健康，20分钟后自动停止。
 var g_console = new egret.TextField(); //调试终端。
 var g_winWidth; // 场景宽度。屏幕准备好以后迅速填入。
 var g_winHeight;
@@ -96,6 +98,8 @@ var Main = (function (_super) {
     }
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
+        g_shutdownTimer = new egret.Timer(1000, 0); // 这里用无限次。实际时间在别处控制。
+        g_shutdownTimer.addEventListener(egret.TimerEvent.TIMER, this.autoShutdown, this);
         //获取舞台宽度和高度：
         g_winWidth = this.stage.stageWidth;
         g_winHeight = this.stage.stageHeight;
@@ -236,6 +240,7 @@ var Main = (function (_super) {
         g_sceneLayer.addChild(g_welcomeScene);
         g_welcomeScene.visible = false;
         g_sceneLayer.visible = true;
+        g_shutdownScr = new gdeint.CShutdownScr();
         g_praContainer = new CEyeanglePraContainer();
         g_praScene = new eyeangle2.CEyeanglePraScene();
         g_praScene.setWinWidth(480 /*this.stage.stageWidth*/); // 当前版本：直接指定480低分辨率。将来版本：根据舞台尺寸获取合适分辨率。
@@ -248,6 +253,10 @@ var Main = (function (_super) {
         g_sceneLayer.addChild(g_praScene);
         g_dlgLayerContainer.addChild(g_praScene.getDlgLayer());
         g_notiLayerContainer.addChild(g_praScene.getNotiLayer());
+        g_shutdownScr.visible = false;
+        g_shutdownScr.width = this.stage.stageWidth;
+        g_shutdownScr.height = this.stage.stageHeight;
+        g_sceneLayer.addChild(g_shutdownScr);
         var caliDlg = new eyeangle2.CCaliDlg();
         caliDlg = new eyeangle2.CCaliDlg();
         caliDlg.visible = false;
@@ -269,8 +278,11 @@ var Main = (function (_super) {
         g_praContainer.setPreloaderUI(preloaderUI);
         var praContainerAdapter = new CPage2EyeanglePraContainerAdapter();
         praContainerAdapter.m_adaptee = g_praContainer;
+        var shutdownPageAdapter = new CPage2EuiAdapter();
+        shutdownPageAdapter.m_adaptee = g_shutdownScr;
         g_pageJumper.setPage("WelcomeScene", g_welcomePage);
         g_pageJumper.setPage("PraScene", praContainerAdapter);
+        g_pageJumper.setPage("ShutdownScr", shutdownPageAdapter);
         g_pageJumper.gotoPage("WelcomeScene", null);
     };
     /**
@@ -282,6 +294,15 @@ var Main = (function (_super) {
         var texture = RES.getRes(name);
         result.texture = texture;
         return result;
+    };
+    Main.prototype.autoShutdown = function () {
+        /*        if(g_shutdownTimer.currentCount >= 12)
+                {
+                    g_pageJumper.gotoPage("ShutdownScr",null);
+                }*/
+        if (g_shutdownTimer.currentCount >= 1200) {
+            g_pageJumper.gotoPage("ShutdownScr", null);
+        }
     };
     return Main;
 }(eui.UILayer));
