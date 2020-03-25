@@ -40,7 +40,7 @@
   ],
   "targets": {
     "android": {
-      "appname": "宜英角眼通2",
+      "appname": "宜英角眼通2代",
       "packagename": "org.gdeint.Eyeangle"
     },
     "ios": {
