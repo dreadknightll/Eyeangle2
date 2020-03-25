@@ -17,6 +17,11 @@ class CPage2EuiAdapter extends gdeint.CPage {
         this.m_adaptee.visible = true;
 	}
 
+	public showOnFront():void {
+        super.showOnFront();
+        this.m_adaptee.visible = true;
+    }
+
 	public hide():void {
         super.hide();
         this.m_adaptee.visible = false;

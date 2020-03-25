@@ -23,6 +23,10 @@ var CPage2EuiAdapter = (function (_super) {
         _super.prototype.show.call(this);
         this.m_adaptee.visible = true;
     };
+    CPage2EuiAdapter.prototype.showOnFront = function () {
+        _super.prototype.showOnFront.call(this);
+        this.m_adaptee.visible = true;
+    };
     CPage2EuiAdapter.prototype.hide = function () {
         _super.prototype.hide.call(this);
         this.m_adaptee.visible = false;
