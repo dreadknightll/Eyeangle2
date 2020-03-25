@@ -269,13 +269,13 @@ class Main extends eui.UILayer {
     }
 
     public autoShutdown() {
-/*        if(g_shutdownTimer.currentCount >= 12) 
-        {
-            g_pageJumper.gotoPage("ShutdownScr",null);
-        }*/
-        if(g_shutdownTimer.currentCount >= 1200) //20分钟。
+        if(g_shutdownTimer.currentCount >= 12) 
         {
             g_pageJumper.gotoPage("ShutdownScr",null);
         }
+/*        if(g_shutdownTimer.currentCount >= 1200) //20分钟。
+        {
+            g_pageJumper.gotoPage("ShutdownScr",null);
+        }*/
     }
 }

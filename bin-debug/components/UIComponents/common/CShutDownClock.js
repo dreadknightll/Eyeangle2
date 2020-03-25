@@ -10,28 +10,28 @@ r.prototype = e.prototype, t.prototype = new r();
 };
 var gdeint;
 (function (gdeint) {
-    var CShutDownClock = (function (_super) {
-        __extends(CShutDownClock, _super);
-        function CShutDownClock() {
+    var CShutdownClock = (function (_super) {
+        __extends(CShutdownClock, _super);
+        function CShutdownClock() {
             var _this = _super.call(this) || this;
             _this.m2_fontSize = 24;
             _this.m2_cc = false;
             _this.m2_cc = 94;
             return _this;
         }
-        CShutDownClock.prototype.childrenCreated = function () {
+        CShutdownClock.prototype.childrenCreated = function () {
             this.m2_cc = true;
             this.timeLabel.size = this.m2_fontSize;
             this.m_tracerTimer = new egret.Timer(200, 0);
             this.m_tracerTimer.addEventListener(egret.TimerEvent.TIMER, this.onTracerTimer, this);
         };
-        CShutDownClock.prototype.setFontSize = function (fs) {
+        CShutdownClock.prototype.setFontSize = function (fs) {
             this.m2_fontSize = fs;
             if (this.m2_cc) {
                 this.timeLabel.size = this.m2_fontSize;
             }
         };
-        CShutDownClock.prototype.onTracerTimer = function () {
+        CShutdownClock.prototype.onTracerTimer = function () {
             this.timeLabel.text = gdeint.seconds2MinSec(1200 - this.m_timerPointer.currentCount);
         };
         /*		public setTimer(msCnt:number , listener:Function) {
@@ -40,13 +40,13 @@ var gdeint;
                     timer.addEventListener(egret.TimerEvent.TIMER,listener,this);
                     timer.start();
                 }*/
-        CShutDownClock.prototype.setTimer = function (timer) {
+        CShutdownClock.prototype.setTimer = function (timer) {
             this.m_timerPointer = timer;
             this.m_tracerTimer.start();
         };
-        return CShutDownClock;
+        return CShutdownClock;
     }(eui.Component));
-    gdeint.CShutDownClock = CShutDownClock;
-    __reflect(CShutDownClock.prototype, "gdeint.CShutDownClock");
+    gdeint.CShutdownClock = CShutdownClock;
+    __reflect(CShutdownClock.prototype, "gdeint.CShutdownClock");
 })(gdeint || (gdeint = {}));
-//# sourceMappingURL=CShutDownClock.js.map
+//# sourceMappingURL=CShutdownClock.js.map

@@ -77,7 +77,7 @@
 		"bin-debug/components/UIComponents/common/CProgressView.js",
 		"bin-debug/components/UIComponents/common/CScoreFlagRectAdapter.js",
 		"bin-debug/components/UIComponents/common/CScoreView.js",
-		"bin-debug/components/UIComponents/common/CShutDownClock.js",
+		"bin-debug/components/UIComponents/common/CShutdownClock.js",
 		"bin-debug/components/UIComponents/common/CShutdownScr.js",
 		"bin-debug/components/UIComponents/common/CStartingCharAni.js",
 		"bin-debug/components/UIComponents/common/CThumbUI.js",

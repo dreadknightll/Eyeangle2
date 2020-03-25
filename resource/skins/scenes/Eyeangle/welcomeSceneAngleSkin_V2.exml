@@ -2,7 +2,7 @@
 <e:Skin class="welcomeSceneSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:gdeint="gdeint.*" xmlns:eyeangle2="eyeangle2.*">
     <e:Rect width="100%" height="100%" fillColor="0xFFFFFF"/>
 
-	<gdeint:CShutDownClock id="shutdownClock" width="69" height="57" x="363.37" y="15.5" anchorOffsetX="0" anchorOffsetY="0"/>
+	<gdeint:CShutdownClock id="shutdownClock" width="69" height="57" x="363.37" y="15.5" anchorOffsetX="0" anchorOffsetY="0"/>
 
 	<e:Group x="59.5" y="84.5" anchorOffsetY="0" height="109" anchorOffsetX="0" width="359">
 	   	<e:Image source="eyeangle2_logo_png" y="6.5" width="95" height="95" x="8"/>

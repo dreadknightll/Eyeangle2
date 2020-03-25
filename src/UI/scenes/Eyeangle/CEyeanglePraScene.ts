@@ -75,6 +75,7 @@ namespace eyeangle2 {
         public midAreaGroup: eui.Group;
         public bottomArea: eyeangle2.CBottomArea; //底部区域。
         public bottomAreaGroup: eui.Group;
+        public shutdownClock:gdeint.CShutdownClock;
         public cmpAngleDlg: CCmpAngleDlg; //得分显示牌。显示一次输入的得分。
         public finalScoreDlg: CFinalScoreDlg; //总分显示框。练习结束后显示最后结果。    
 
@@ -130,6 +131,8 @@ namespace eyeangle2 {
             var rect: egret.Rectangle = new egret.Rectangle(0,0,this.topArea.width,this.topArea.height+5);
             this.topAreaGroup.mask = rect;
 
+            this.shutdownClock.setFontSize(24);
+
             this.prepareTipBalloons();
 
             this.bottomArea.backBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBackBtnTap,this);
@@ -141,6 +144,10 @@ namespace eyeangle2 {
             this.bottomArea.angleInputter.addEventListener(CAngleInputterEvent.EVT_DI_TOUCHEND,this.onAngleInputerTchEnd,this);
 
             this.finalScoreDlg.addEventListener(CFinalScoreDlgEvent.EVT_REPLAY_BTN_TAP,this.onReplay,this);
+
+            this.shutdownClock.setTimer(g_shutdownTimer);
+            this.shutdownClock.addEventListener(egret.TouchEvent.TOUCH_TAP , this.onClockTap , this);
+
         }
 
         private prepareTipBalloons():void {
@@ -459,6 +466,10 @@ namespace eyeangle2 {
             this.topArea.switchBtn.source = RES.getRes("top_screen_button_down_png");
 
             this.readjustThumbSel();
+        }
+
+        private onClockTap():void {
+            g_praContainer.showAlert("为了您的健康，每次使用20分钟后自动停止。" , null);
         }
 
         /*

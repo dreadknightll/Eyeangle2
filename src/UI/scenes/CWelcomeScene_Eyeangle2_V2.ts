@@ -38,7 +38,7 @@ namespace eyeangle2 {
         private m2_tmpS2StartBtn = true; //Switched to StartBtn.
 
         public m_latestVerLoader:egret.URLLoader;
-        private shutdownClock:gdeint.CShutDownClock;
+        private shutdownClock:gdeint.CShutdownClock;
 
         public switch2StartBtn():void {
             this.m2_tmpS2StartBtn = true;
@@ -77,6 +77,10 @@ namespace eyeangle2 {
                 this.showCRBtn.x += 20;
                 this.showCRBtn.y += 15;
             }*/
+
+            this.shutdownClock.setFontSize(18);
+            this.shutdownClock.setTimer(g_shutdownTimer);
+            this.shutdownClock.addEventListener(egret.TouchEvent.TOUCH_TAP , this.onClockTap , this);
 
             if(this.m2_tmpS2StartBtn) {
                 this.startBtn.visible = true;
@@ -150,6 +154,8 @@ namespace eyeangle2 {
             this.priPoliRead.addEventListener(eui.UIEvent.CHANGE , this.onReadyCBCheck , this);
             this.horverChecked.addEventListener(eui.UIEvent.CHANGE , this.onReadyCBCheck , this);
 
+            this.shutdownClock.setTimer(g_shutdownTimer);
+
             this.m_cc = true;
         }
 
@@ -182,11 +188,17 @@ namespace eyeangle2 {
             this.m2_tmpS2StartBtn = false;
             this.startBtn.visible = false;
 
+            g_shutdownTimer.start();
+
             g_praContainer.startNewPra();
             g_praContainer.saveVisibleStates();
 
             g_pageJumper.gotoPage("PraScene",null);
 
+        }
+
+        private onClockTap():void {
+            g_praContainer.showAlert("为了您的健康，每次使用20分钟后自动停止。" , null);
         }
     }
 }

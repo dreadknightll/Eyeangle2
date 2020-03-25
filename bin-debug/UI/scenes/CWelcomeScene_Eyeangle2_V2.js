@@ -59,6 +59,9 @@ var eyeangle2;
                             this.showCRBtn.x += 20;
                             this.showCRBtn.y += 15;
                         }*/
+            this.shutdownClock.setFontSize(18);
+            this.shutdownClock.setTimer(g_shutdownTimer);
+            this.shutdownClock.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClockTap, this);
             if (this.m2_tmpS2StartBtn) {
                 this.startBtn.visible = true;
             }
@@ -107,6 +110,7 @@ var eyeangle2;
             this.userProRead.addEventListener(eui.UIEvent.CHANGE, this.onReadyCBCheck, this);
             this.priPoliRead.addEventListener(eui.UIEvent.CHANGE, this.onReadyCBCheck, this);
             this.horverChecked.addEventListener(eui.UIEvent.CHANGE, this.onReadyCBCheck, this);
+            this.shutdownClock.setTimer(g_shutdownTimer);
             this.m_cc = true;
         };
         CWelcomeScene_Eyeangle2_V2.prototype.onReadyCBCheck = function () {
@@ -131,9 +135,13 @@ var eyeangle2;
             //        先显示翻页动画 （未完成）
             this.m2_tmpS2StartBtn = false;
             this.startBtn.visible = false;
+            g_shutdownTimer.start();
             g_praContainer.startNewPra();
             g_praContainer.saveVisibleStates();
             g_pageJumper.gotoPage("PraScene", null);
+        };
+        CWelcomeScene_Eyeangle2_V2.prototype.onClockTap = function () {
+            g_praContainer.showAlert("为了您的健康，每次使用20分钟后自动停止。", null);
         };
         return CWelcomeScene_Eyeangle2_V2;
     }(eui.Component));

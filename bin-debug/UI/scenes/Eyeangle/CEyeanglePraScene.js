@@ -98,6 +98,7 @@ var eyeangle2;
             this.topSpaceGrp.addChild(this.m_topSpace);
             var rect = new egret.Rectangle(0, 0, this.topArea.width, this.topArea.height + 5);
             this.topAreaGroup.mask = rect;
+            this.shutdownClock.setFontSize(24);
             this.prepareTipBalloons();
             this.bottomArea.backBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBackBtnTap, this);
             this.bottomArea.OKBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onOKBtnTap, this);
@@ -106,6 +107,8 @@ var eyeangle2;
             this.bottomArea.angleInputter.addEventListener(CAngleInputterEvent.EVT_DI_TOUCHSTART, this.onAngleInputerTch, this);
             this.bottomArea.angleInputter.addEventListener(CAngleInputterEvent.EVT_DI_TOUCHEND, this.onAngleInputerTchEnd, this);
             this.finalScoreDlg.addEventListener(CFinalScoreDlgEvent.EVT_REPLAY_BTN_TAP, this.onReplay, this);
+            this.shutdownClock.setTimer(g_shutdownTimer);
+            this.shutdownClock.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClockTap, this);
         };
         CEyeanglePraScene.prototype.prepareTipBalloons = function () {
             this.m_notiLayer.addChild(this.m_tipBalloon1);
@@ -364,6 +367,9 @@ var eyeangle2;
             this.midAreaGroup.y = this.m_wm.getMidY();
             this.topArea.switchBtn.source = RES.getRes("top_screen_button_down_png");
             this.readjustThumbSel();
+        };
+        CEyeanglePraScene.prototype.onClockTap = function () {
+            g_praContainer.showAlert("为了您的健康，每次使用20分钟后自动停止。", null);
         };
         /*
         * 图片拖动时触发。
